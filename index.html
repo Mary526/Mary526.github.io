@@ -80,12 +80,12 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Alexiel">
+<meta property="og:title" content="石沉溪洞">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Alexiel">
+<meta property="og:site_name" content="石沉溪洞">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Alexiel">
+<meta name="twitter:title" content="石沉溪洞">
 
 
 
@@ -121,7 +121,7 @@
 
 
 
-  <title>Alexiel</title>
+  <title>石沉溪洞</title>
   
 
 
@@ -152,7 +152,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Alexiel</span>
+        <span class="site-title">石沉溪洞</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -193,6 +193,16 @@
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
           </a>
         </li>
       
@@ -238,7 +248,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Alexiel">
+      <meta itemprop="name" content="石沉溪洞">
     </span>
 
     
@@ -331,14 +341,33 @@
 
       
         
-          technical
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/11/25/IOS-package/">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <blockquote>
+<p>这篇文章仅供自己记录</p>
+</blockquote>
+<p>前面想说很多吐槽苹果的话，但终于忍住了，不想暴露自己的无知&gt; &lt;！</p>
+<p>这大半年一直致力于移动端开发，但之前一直是潜心于开发，并没有想过发布APP，毕竟这是另外一个同事负责的，但不知为何，项目经理现在让我来打包。我擦咧，遇坑无数，所以这份文档不做很多详细说明，仅作为自己记忆的凭证。蛤蛤，感觉自己真像个心机婊～借着公司给的权限，大玩特玩23333。</p>
+<p><strong>配置前提：</strong>mbp(OSX 10.11)一台、Xcode8.0、企业版开发者账号（$299）、一个正在开发的APP（yb）</p>
+<p><strong>正文：</strong></p>
+<ul>
+<li>因为公司新购置了一台Mbp，希望能够在新电脑上也进行开发和打包，所以特留下记录，以免过段时间忘掉了。</li>
+<li>Xcode8打包现在已经不需要配置code signning，可以参考这个链接：<a href="http://qkxue.net/info/32031/Xcode-8" target="_blank" rel="noopener">Xcode 8 打包教程</a>。</li>
+</ul>
+<blockquote>
+<p>默认是一个全新的电脑，需要配置苹果开发等等证书…</p>
+</blockquote>
+<ol>
+<li>打开Xcode，Xcode&gt;Preferences，添加自己的苹果ID，这样开发网站上会为你的这台新Mac生成一个证书，下图是完成图；<br><img src="http://img.ngacn.cc/attachments/mon_201610/15/-blqxlQ7q5f-hlk5ZdT3cSm0-gx.png" alt=".p12"></li>
+<li>登陆<a href="https://developer.apple.com" target="_blank" rel="noopener">苹果开发者账号官网</a>下载相应证书及配置文件，红框中的三个文件都下载下来，前两个一个是苹果对胡天华<code>苹果账号</code>进行开发的允许证书，后一个是对开发者所使用的Mac的<code>授权证书</code>，第三个是所开发的APP的<code>配置文件</code>；<br><img src="http://img.ngacn.cc/attachments/mon_201610/15/-blqxlQ7q5f-1lw4ZfT3cSt0-jm.png" alt="配置文件"><br><img src="http://img.ngacn.cc/attachments/mon_201610/15/-blqxlQ7q5f-fzn1ZkT3cSun-nj.png" alt=""></li>
+<li>导入<code>.p12证书</code>，这个我也没理解，反正就是要导入，导入了，才能在这台电脑上开发，这个证书的重要性凌驾在上面的所有证书上面。导入所有证书；打开钥匙串，在登陆选项，文件&gt;导入项目；<br><img src="http://img.ngacn.cc/attachments/mon_201610/15/-blqxlQ7q5f-fnedZpT3cSp5-mc.png" alt="导出.p12证书"><br>先导入<code>.p12证书</code>，<a href="http://ask.dcloud.net.cn/article/152" target="_blank" rel="noopener">iOS证书(.p12)和描述文件(.mobileprovision)申请</a>，我用的是9.28日新生成的那个，密码是123。存放文件夹：Topcheer&gt;ios开发&gt;证书 .p12；然后导入后两个证书，最后点击下那个APP配置文件，就可以了。中途我删掉了对个人开发授权的那个证书（9w3d65deb7)，Xcode还报错了的，如图：<br><img src="http://img.ngacn.cc/attachments/mon_201610/15/-blqxlQ7q5f-cimuZgT3cS12w-q0.png" alt=""><br>这样就配置好开发的证书了：<br><img src="http://img.ngacn.cc/attachments/mon_201610/15/-blqxlQ7q5f-cimuZgT3cS12w-q0.png" alt=""></li>
+<li>打包APP：<br>Product &gt; Archive，后续步骤如下：<br><img src="http://img.ngacn.cc/attachments/mon_201610/15/-blqxlQ7q5f-kdw0K2fT3cSxc-os.png" alt=""><br><img src="http://img.ngacn.cc/attachments/mon_201610/15/-blqxlQ7q5f-jpwbK1iT1kSg4-9q.png" alt=""><br><img src="http://img.ngacn.cc/attachments/mon_201610/15/-blqxlQ7q5f-k9ydKwT1kSg6-9n.png" alt=""><br><img src="http://img.ngacn.cc/attachments/mon_201610/15/-blqxlQ7q5f-b4hdK1cT1kSg4-9q.png" alt=""><br><img src="http://img.ngacn.cc/attachments/mon_201610/15/-blqxlQ7q5f-ayb6ZiT3cS12w-q0.png" alt=""></li>
+</ol>
+<p><strong>参考链接：</strong></p>
+<blockquote>
+<p><a href="http://www.lofter.com/blog/hutianhua?act=dashboardclick_20130514_04" target="_blank" rel="noopener">iOS 企业版 证书相关问题</a></p>
+</blockquote>
+
+          
         
       
     </div>
@@ -394,7 +423,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Alexiel">
+      <meta itemprop="name" content="石沉溪洞">
     </span>
 
     
@@ -487,14 +516,38 @@
 
       
         
-          technical
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/11/21/OH-MY-ZSH/">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <p><img src="http://imglf1.nosdn.127.net/img/RE1iZDZ5cUNZaTd4VzNtSFlGTm5CZVdHMjMwU2ZySnVScCtuTFdFYUZ6cndUZXJqUGxvclJBPT0.png?=imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg%7Cwatermark&amp;type=2" alt="完成图"></p>
+<p>只是一点想说的废话吧，这个配置教程是需要有一些<code>linux</code>命令行的基础，然后需要了解下<code>OSX</code>这个系统，系统文件是隐藏状态这个属性。因为是针对我个人的一个技术纪录，所以仅作参考。</p>
+<p>本帖基于<a href="https://laoshuterry.gitbooks.io/mac_os_setup_guide/content/4_ZshConfig.html" target="_blank" rel="noopener">此贴</a>进行讲解：</p>
+<p><strong>1.安装<a href="http://iterm2.com/" target="_blank" rel="noopener">iterm2</a>;</strong></p>
+<p><strong>2.通过<a href="http://iterm2.com/" target="_blank" rel="noopener">Homebrew</a>下载安装<code>zsh</code>，将zsh设置成系统默认shell，以代替bash</strong>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">brew install zsh</span><br><span class="line"></span><br><span class="line">sudo vi /etc/shells</span><br><span class="line"></span><br><span class="line">#按i进行插入操作，在文末添加</span><br><span class="line"></span><br><span class="line">/usr/local/bin/zsh</span><br><span class="line"></span><br><span class="line">#按ESC，保存退出，如果没有反应，看是不是输入没有切换成英文</span><br><span class="line"></span><br><span class="line">:wq!</span><br><span class="line"></span><br><span class="line">chsh -s /usr/local/bin/zsh</span><br></pre></td></tr></table></figure>
+<p>然后重启iterm2</p>
+<p><strong>3.利用<code>Homebrew</code>安装curl(或者wget)：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew install curl</span><br><span class="line"></span><br><span class="line">brew install wget</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl: curl -L http://install.ohmyz.sh | sh</span><br><span class="line"></span><br><span class="line">wget: wget --no-check-certificate http://install.ohmyz.sh -O - | sh</span><br></pre></td></tr></table></figure>
+<p><strong>4.修改配色</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vi .zshrc</span><br><span class="line"></span><br><span class="line">#将ZSH_THEME=&quot;XXX&quot;改为ZSH_THEME=&quot;agnoster&quot;</span><br><span class="line"></span><br><span class="line">#按ESC，保存退出，如果没有反应，看是不是输入没有切换成英文</span><br><span class="line"></span><br><span class="line">:wq!</span><br></pre></td></tr></table></figure>
+<p><strong>5.选用字体，才能是箭头的图标字体正确显示</strong></p>
+<p><em>Meslo LG M DZ Regular for Powerline.tff</em></p>
+<blockquote>
+<p><a href="http://www.jianshu.com/p/7de00c73a2bb" target="_blank" rel="noopener">字体参考文章的第六部分</a></p>
+</blockquote>
+<p>结语：额，其实也没有那么难的，只是因为对于linux相关文件操作的命令不熟悉，而且涉及到的技术点又有点多，所以一开的摸索非常痛苦。但是后来稍微深入了解下，慢慢熟悉起来各种配置啥的，感觉也就没啥问题了。哎，真是麻烦的世界呢。</p>
+<p>我还是原来的那个想法，真理是有的，但语言的阻隔，想法的不同，导致我们在追求真理的道路上，各自摸黑前进，有各自不兼容，创造了奇奇怪怪的语言，运用了稀奇古怪的方法，这使得后人学习起来，分外艰难。解决一个问题，就要做好了解这一整套系统运作的决心，因为后生并不知晓这到底是积重难返造成的历史遗留问题，还是说一个不经意留下的bug。</p>
+<p>哎，为何这么多天坑。</p>
+<blockquote>
+<p>20161116修订说明：</p>
+</blockquote>
+<blockquote>
+<p>第2条：需要在管理员权限下才能执行（sudo vi /etc/shells）</p>
+</blockquote>
+<blockquote>
+<p>第5条：新加了字体部分链接补充</p>
+</blockquote>
+
+          
         
       
     </div>
@@ -550,7 +603,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Alexiel">
+      <meta itemprop="name" content="石沉溪洞">
     </span>
 
     
@@ -643,14 +696,19 @@
 
       
         
-          technical
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/11/18/vartual-machine/">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <p><strong>Project objective :</strong> plant OSX(10.11), Xcode(7.2), ionic(1.7.7)and cordova(5.3.3) in virtual machine.</p>
+<p><strong>Building environment :</strong> Windows 10</p>
+<p><strong>Comments :</strong> as the latest version of cordova and ionic removes certain interfaces that may required in the developing environment, previous ones are adopted in this artical</p>
+<p><strong>Building process :</strong> principal part of the process refers to  <a href="http://jingyan.baidu.com/article/363872ec206a356e4ba16f30.html" target="_blank" rel="noopener">Win10 environment to build Apple virtual machine</a></p>
+<p><strong>Remark 1:</strong> the version of VM does not affect, either 10, 11 or 12 are practicable, which is the same when comes to unlocker 206, 207 and 208.</p>
+<p><strong>Remark 2:</strong> after reach “Select the disk image file for installation, click to select CDR image file path”, click “Browse..” and choose to show all files, otherwise only .iso files would be displayed.</p>
+<p><strong>Remark 3:</strong> the Wi-fi connect could not be selected when setting up the system. But Windows 10 allows VM to access the internet with default settings.<br><img src="http://imglf2.nosdn.127.net/img/RE1iZDZ5cUNZaTRHUlVMVm1EQzdYdnBIYWFUR3AvNkx0Z1BDN1krNGlsN0JHQU1lS3dOQmJRPT0.png?=imageView&amp;thumbnail=500x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg%7Cwatermark&amp;type=2" alt="Remark3-wifi"><br><strong>Conclusion:</strong> due to the careless and the aging of the guide that does not support Windows 10, a considerable number of methods are attempted for resolving issues that mentioned above.</p>
+<blockquote>
+<p><strong>refer link</strong> : <a href="http://hutianhua.lofter.com/post/1cec4fd4_cf1571e" target="_blank" rel="noopener">win10环境搭建苹果虚拟机</a></p>
+</blockquote>
+
+          
         
       
     </div>
