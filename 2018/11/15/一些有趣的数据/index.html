@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="石沉溪洞">
 <meta property="og:description" content="这个只是一种个人的恶趣味吧，从入职这家新公司开始，变得喜欢收集某些没有什么意义的数据。看着数据逐渐变多，有一种油然而生的快乐。数据截取时间段为某年三月至当年一月，全部源自某家公司。仅供个人娱乐，细节请不要在意鸭~栏目主要分为：离职入职性别比，哪个月份走的人最多鸭和离职岗位比。 图表一：离职入职性别比           // 基于准备好的dom，初始化echarts实例         var m">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-15T06:07:49.088Z">
+<meta property="og:updated_time" content="2018-11-15T08:06:18.618Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一些有趣的数据">
 <meta name="twitter:description" content="这个只是一种个人的恶趣味吧，从入职这家新公司开始，变得喜欢收集某些没有什么意义的数据。看着数据逐渐变多，有一种油然而生的快乐。数据截取时间段为某年三月至当年一月，全部源自某家公司。仅供个人娱乐，细节请不要在意鸭~栏目主要分为：离职入职性别比，哪个月份走的人最多鸭和离职岗位比。 图表一：离职入职性别比           // 基于准备好的dom，初始化echarts实例         var m">
@@ -331,11 +331,11 @@
 
       
         <p>这个只是一种个人的恶趣味吧，从入职这家新公司开始，变得喜欢收集某些没有什么意义的数据。看着数据逐渐变多，有一种油然而生的快乐。<br>数据截取时间段为某年三月至当年一月，全部源自某家公司。仅供个人娱乐，细节请不要在意鸭~栏目主要分为：离职入职性别比，哪个月份走的人最多鸭和离职岗位比。</p>
-<h3 id="图表一：离职入职性别比"><a href="#图表一：离职入职性别比" class="headerlink" title="图表一：离职入职性别比"></a>图表一：离职入职性别比</h3><div id="echarts3339" style="width: 100%;height: 400px;margin: 0 auto"></div>
+<h3 id="图表一：离职入职性别比"><a href="#图表一：离职入职性别比" class="headerlink" title="图表一：离职入职性别比"></a>图表一：离职入职性别比</h3><div id="echarts2799" style="width: 100%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts3339'));
+        var myChart = echarts.init(document.getElementById('echarts2799'));
         // 指定图表的配置项和数据
         var option = {
     tooltip: {
@@ -432,46 +432,110 @@
 <p>结论：单位时间内，公司入职的女性较多，离职的男性较多。</p>
 </blockquote>
 <hr>
-<h3 id="图表二：哪个月份走的人最多鸭"><a href="#图表二：哪个月份走的人最多鸭" class="headerlink" title="图表二：哪个月份走的人最多鸭"></a>图表二：哪个月份走的人最多鸭</h3><div id="echarts9476" style="width: 100%;height: 400px;margin: 0 auto"></div>
+<h3 id="图表二：哪个月份走的人最多鸭"><a href="#图表二：哪个月份走的人最多鸭" class="headerlink" title="图表二：哪个月份走的人最多鸭"></a>图表二：哪个月份走的人最多鸭</h3><div id="echarts7511" style="width: 100%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script>
 <script type="text/javascript">
         // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('echarts9476'));
+        var myChart = echarts.init(document.getElementById('echarts7511'));
         // 指定图表的配置项和数据
-        var option = {
-    title : {
-        text: '某站点用户访问来源',
-        subtext: '纯属虚构',
-        x:'center'
+        var option =  
+{
+    xAxis: {
+        type: 'category',
+        data: ['Apr', 'March', 'May', 'Jun', 'July', 'Aug', 'Set', 'Oct', 'Nov']
     },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [1, 1, 0, 1, 1, 1, 1, 4, 1],
+        type: 'line'
+    }] 
+};
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+<blockquote>
+<p>结论： 十月份走的人最多哟。</p>
+</blockquote>
+<hr>
+<h3 id="图表三：离职岗位比"><a href="#图表三：离职岗位比" class="headerlink" title="图表三：离职岗位比"></a>图表三：离职岗位比</h3><div id="echarts9721" style="width: 100%;height: 400px;margin: 0 auto"></div>
+<script src="https://cdn.bootcss.com/echarts/3.8.0/echarts.common.min.js"></script>
+<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('echarts9721'));
+        // 指定图表的配置项和数据
+        var option =  
+{
+    backgroundColor: '#2c343c',
+
+    title: {
+        text: '离职岗位比',
+        left: 'center',
+        top: 20,
+        textStyle: {
+            color: '#ccc'
+        }
+    },
+
     tooltip : {
         trigger: 'item',
         formatter: "{a} <br/>{b} : {c} ({d}%)"
     },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-        data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+
+    visualMap: {
+        show: false,
+        min: 80,
+        max: 600,
+        inRange: {
+            colorLightness: [0, 1]
+        }
     },
     series : [
         {
-            name: '访问来源',
-            type: 'pie',
+            name:'岗位',
+            type:'pie',
             radius : '55%',
-            center: ['50%', '60%'],
+            center: ['50%', '50%'],
             data:[
-                {value:335, name:'直接访问'},
-                {value:310, name:'邮件营销'},
-                {value:234, name:'联盟广告'},
-                {value:135, name:'视频广告'},
-                {value:1548, name:'搜索引擎'}
-            ],
+                {value:3, name:'前端'},
+                {value:1, name:'产品'},
+                {value:4, name:'APP运营'},
+                {value:1, name:'运营专员'},
+                {value:2, name:'美工'},
+                {value:1, name:'客服'},
+                {value:1, name:'运维'}
+            ].sort(function (a, b) { return a.value - b.value; }),
+            roseType: 'radius',
+            label: {
+                normal: {
+                    textStyle: {
+                        color: 'rgba(255, 255, 255, 0.3)'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    lineStyle: {
+                        color: 'rgba(255, 255, 255, 0.3)'
+                    },
+                    smooth: 0.2,
+                    length: 10,
+                    length2: 20
+                }
+            },
             itemStyle: {
-                emphasis: {
-                    shadowBlur: 10,
-                    shadowOffsetX: 0,
+                normal: {
+                    color: '#c23531',
+                    shadowBlur: 200,
                     shadowColor: 'rgba(0, 0, 0, 0.5)'
                 }
+            },
+
+            animationType: 'scale',
+            animationEasing: 'elasticOut',
+            animationDelay: function (idx) {
+                return Math.random() * 200;
             }
         }
     ]
@@ -479,8 +543,10 @@
         // 使用刚指定的配置项和数据显示图表。
         myChart.setOption(option);
 </script>
-<hr>
-<h3 id="图表三：离职岗位比"><a href="#图表三：离职岗位比" class="headerlink" title="图表三：离职岗位比"></a>图表三：离职岗位比</h3>
+<blockquote>
+<p>结论APP运营主管不好当啊！</p>
+</blockquote>
+
       
     </div>
     
@@ -739,10 +805,9 @@
   
 
 
+  
 
 
-  
-  
 
 
 
@@ -784,12 +849,7 @@
 
   
   
-    <script type="text/javascript" src="/lib/three/three.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
@@ -1203,5 +1263,5 @@
 
   
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"react":{"opacityDefault":1,"opacityOnHover":0.2},"log":false});</script></body>
 </html>
