@@ -9,5 +9,8 @@ comments: true
       強くなる 向かい風受けて
       翼拡げ 空に願ってた
       約束の意味 覚えてる？
-  </center>  
- 
+  </center>   
+  
+  <center>
+      [join me](https://t.me/joinchat/Hw4XMQ9fZFQ14HgNk_TGTw)
+  </center> 
