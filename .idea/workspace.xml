@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a45d58b-3606-4b53-8118-c292d3087a68" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/justice.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/严肃的滑稽.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/毕业歌.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/爱，你感受到了爱.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/source/_posts/随感.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/guestbook/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/guestbook/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/_posts/爱，你感受到了爱.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/爱，你感受到了爱.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -23,24 +17,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="爱，你感受到了爱.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="爱，你感受到了爱.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/_posts/爱，你感受到了爱.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="42">
-                <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+              <first_editor relative-caret-position="252">
+                <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/guestbook/index.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="273">
-                <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+              <first_editor relative-caret-position="231">
+                <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
               </first_editor>
               <second_editor />
             </state>
@@ -153,10 +147,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="345" />
-    <option name="y" value="125" />
+    <option name="x" value="290" />
+    <option name="y" value="152" />
     <option name="width" value="1450" />
-    <option name="height" value="868" />
+    <option name="height" value="870" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -253,12 +247,12 @@
       <workItem from="1542248139618" duration="5195000" />
       <workItem from="1542253423844" duration="14487000" />
       <workItem from="1543285969337" duration="5846000" />
-      <workItem from="1543294538337" duration="14814000" />
+      <workItem from="1543294538337" duration="15631000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50375000" />
+    <option name="totallyTimeSpent" value="51192000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -270,9 +264,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="345" y="125" width="1450" height="868" extended-state="0" />
+    <frame x="290" y="152" width="1450" height="870" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2667141" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20483641" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329927" />
       <window_info anchor="bottom" id="Apicloud" order="7" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -281,7 +275,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.329927" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4980635" visible="true" weight="0.3602837" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4980635" visible="true" weight="0.23903818" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -657,21 +651,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/爱，你感受到了爱.md">
+    <entry file="file://$PROJECT_DIR$/source/guestbook/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="42">
-            <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <first_editor relative-caret-position="231">
+            <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/guestbook/index.md">
+    <entry file="file://$PROJECT_DIR$/source/_posts/爱，你感受到了爱.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="273">
-            <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <first_editor relative-caret-position="252">
+            <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
           </first_editor>
           <second_editor />
         </state>
