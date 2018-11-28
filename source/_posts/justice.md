@@ -1,8 +1,7 @@
 ---
 title: justice
 date: 2015-04-27 22:19:11
-categories: 杂文
-comment: true
+categories: 杂文 
 ---
 &emsp;&emsp;其实很早之前，我就知道自己是一个理想主义者了。
 
