@@ -41,7 +41,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace:
   
 # Home page setting
@@ -113,6 +113,6 @@ live2d:
 githubEmojis:
   enable: true
   className: github-emoji
-  unicode: true
+  unicode: false
   styles:
   localEmojis:

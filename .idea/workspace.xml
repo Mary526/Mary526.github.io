@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a45d58b-3606-4b53-8118-c292d3087a68" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/source/_posts/更新日志.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/_posts/关于vue2.0的响应式的相关小结.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/justice.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/justice.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/“劳时”们.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/“劳时”们.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/一些有趣的数据.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/一些有趣的数据.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/严肃的滑稽.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/严肃的滑稽.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/再相聚.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/再相聚.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/奇奇怪怪的王二.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/奇奇怪怪的王二.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/毕业歌.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/毕业歌.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/爱，你感受到了爱.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/爱，你感受到了爱.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/自由.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/自由.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/_posts/随感.md" beforeDir="false" afterPath="$PROJECT_DIR$/source/_posts/随感.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/next" beforeDir="false" afterPath="$PROJECT_DIR$/themes/next" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -28,12 +19,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="更新日志.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="更新日志.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/_posts/更新日志.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="399">
-                <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <first_editor relative-caret-position="294">
+                <caret line="8" column="486" selection-start-line="8" selection-start-column="486" selection-end-line="8" selection-end-column="486" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="关于vue2.0的响应式的相关小结.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source/_posts/关于vue2.0的响应式的相关小结.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="417">
+                <caret line="94" column="164" selection-start-line="94" selection-start-column="164" selection-end-line="94" selection-end-column="164" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themes/next/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="150" column="21" selection-start-line="150" selection-start-column="21" selection-end-line="150" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="355">
+              <caret line="110" selection-start-line="110" selection-end-line="110" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="严肃的滑稽.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source/_posts/严肃的滑稽.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="189">
+                <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="12" />
               </first_editor>
               <second_editor />
             </state>
@@ -44,12 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mist</find>
-      <find>use_motion</find>
-      <find>post</find>
-      <find>author</find>
-      <find>language</find>
-      <find>hexo</find>
       <find>home</find>
       <find>search</find>
       <find>auto_excerpt</find>
@@ -65,7 +92,6 @@
       <find>post_copyright</find>
       <find>lazyload</find>
       <find>githubEmoji</find>
-      <find>githubEmojis</find>
       <find>dn</find>
       <find>busuanzi</find>
       <find>blog</find>
@@ -74,6 +100,13 @@
       <find>scheme</find>
       <find>len</find>
       <find>&lt;b&gt;</find>
+      <find>note</find>
+      <find>highlight</find>
+      <find>auto_detect</find>
+      <find>avator</find>
+      <find>avatar</find>
+      <find>githubEmojis</find>
+      <find>sup</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -96,9 +129,7 @@
         <option value="$PROJECT_DIR$/themes/next/layout/_macro/post.swig" />
         <option value="$PROJECT_DIR$/themes/next/layout/_third-party/analytics/busuanzi-counter.swig" />
         <option value="$PROJECT_DIR$/source/_posts/update-log.md" />
-        <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/source/guestbook/index.md" />
-        <option value="$PROJECT_DIR$/themes/next/_config.yml" />
         <option value="$PROJECT_DIR$/source/_posts/一些有趣的数据.md" />
         <option value="$PROJECT_DIR$/source/_posts/justice.md" />
         <option value="$PROJECT_DIR$/source/_posts/“劳时”们.md" />
@@ -110,6 +141,10 @@
         <option value="$PROJECT_DIR$/source/_posts/随感.md" />
         <option value="$PROJECT_DIR$/source/_posts/爱，你感受到了爱.md" />
         <option value="$PROJECT_DIR$/source/_posts/更新日志.md" />
+        <option value="$PROJECT_DIR$/source/_posts/vue.md" />
+        <option value="$PROJECT_DIR$/themes/next/_config.yml" />
+        <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/source/_posts/关于vue2.0的响应式的相关小结.md" />
       </list>
     </option>
   </component>
@@ -123,10 +158,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="359" />
-    <option name="y" value="131" />
-    <option name="width" value="1450" />
-    <option name="height" value="935" />
+    <option name="x" value="383" />
+    <option name="y" value="47" />
+    <option name="width" value="1496" />
+    <option name="height" value="992" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -146,13 +181,12 @@
             <path>
               <item name="Mary526.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mary526.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="source" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Mary526.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mary526.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="source" type="462c0819:PsiDirectoryNode" />
-              <item name="_posts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Mary526.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -166,6 +200,17 @@
               <item name="source" type="462c0819:PsiDirectoryNode" />
               <item name="guestbook" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Mary526.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mary526.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mary526.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mary526.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="themes" type="462c0819:PsiDirectoryNode" />
+              <item name="next" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -176,7 +221,7 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/workspace_github/Mary526.github.io/_config.yml&#10;post.swig&#9;FILE&#9;file://E:/workspace_github/blog/themes/next/layout/post.swig" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../myApp" />
     <property name="node.js.detected.package.prettier" value="true" />
     <property name="node.js.path.for.package.prettier" value="project" />
     <property name="node.js.selected.package.prettier" value="" />
@@ -218,12 +263,12 @@
       <workItem from="1542253423844" duration="14487000" />
       <workItem from="1543285969337" duration="5846000" />
       <workItem from="1543294538337" duration="15857000" />
-      <workItem from="1543368826863" duration="10593000" />
+      <workItem from="1543368826863" duration="23751000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62011000" />
+    <option name="totallyTimeSpent" value="75169000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -235,19 +280,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="359" y="131" width="1450" height="935" extended-state="0" />
-    <editor active="true" />
+    <frame x="383" y="47" width="1496" height="992" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.28734" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21900827" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329927" />
       <window_info anchor="bottom" id="Apicloud" order="7" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5028449" side_tool="true" weight="0.23796034" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32987013" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.24679486" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.329927" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49715504" visible="true" weight="0.18134715" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49715504" visible="true" weight="0.22677925" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -290,16 +334,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source/_posts/一些有趣的数据.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="4242">
-            <caret line="202" column="5" selection-start-line="202" selection-start-column="5" selection-end-line="202" selection-end-column="5" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/next/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4662">
@@ -368,13 +402,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source/_posts/update-log.md" />
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="108" column="21" lean-forward="true" selection-start-line="108" selection-start-column="21" selection-end-line="108" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/tags/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -408,23 +435,6 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="231">
             <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/next/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="232" column="17" lean-forward="true" selection-start-line="232" selection-start-column="17" selection-end-line="232" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/一些有趣的数据.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="42">
-            <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
           </first_editor>
           <second_editor />
         </state>
@@ -480,16 +490,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="147">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/_posts/严肃的滑稽.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="63">
-            <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -617,8 +617,52 @@
     <entry file="file://$PROJECT_DIR$/source/_posts/更新日志.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="399">
-            <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <first_editor relative-caret-position="294">
+            <caret line="8" column="486" selection-start-line="8" selection-start-column="486" selection-end-line="8" selection-end-column="486" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/一些有趣的数据.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="42">
+            <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/严肃的滑稽.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="189">
+            <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="12" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/next/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="150" column="21" selection-start-line="150" selection-start-column="21" selection-end-line="150" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="110" selection-start-line="110" selection-end-line="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/_posts/关于vue2.0的响应式的相关小结.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="417">
+            <caret line="94" column="164" selection-start-line="94" selection-start-column="164" selection-end-line="94" selection-end-column="164" />
           </first_editor>
           <second_editor />
         </state>
