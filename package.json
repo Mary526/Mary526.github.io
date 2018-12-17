@@ -23,6 +23,7 @@
     "hexo-tag-echarts3": "^1.1.2",
     "hexo-wordcount": "^2.0.1",
     "live2d-widget-model-hijiki": "^1.0.5",
-    "live2d-widget-model-tororo": "^1.0.5"
+    "live2d-widget-model-tororo": "^1.0.5",
+    "hexo-blog-encrypt": "1.1.*"
   }
 }

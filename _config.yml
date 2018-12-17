@@ -116,3 +116,9 @@ githubEmojis:
   unicode: false
   styles:
   localEmojis:
+
+
+# Security
+##
+encrypt:
+    enable: true
