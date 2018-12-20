@@ -118,7 +118,9 @@ githubEmojis:
   localEmojis:
 
 
-# Security
-##
-encrypt:
-    enable: true
+# 2018/12/20 hexo-filter-flowchart
+flowchart:
+  # raphael:   # optional, the source url of raphael.js
+  # flowchart: # optional, the source url of flowchart.js
+  options: # options used for `drawSVG`
+
