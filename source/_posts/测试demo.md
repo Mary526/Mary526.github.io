@@ -27,6 +27,21 @@ c2(yes)->io->e
 c2(no)->op2->e
 ```
 
+```flow
+st=>start: 开始
+e=>end: 结束
+op1=>operation: 点击小程序图标  
+op2=>operation: 进入默认页，零元购活动列表页
+op3=>operation: 弹出提示“关注公众号”
+cond=>condition: 是否登录
+c2=>condition: 去关注
+
+st->op1->op2->cond
+cond(yes,right)->e
+cond(no)->op3->c2
+```
+ 
+
 # 思维导图
 
 
