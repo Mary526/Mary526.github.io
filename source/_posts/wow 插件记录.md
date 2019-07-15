@@ -11,7 +11,7 @@ tags:
 
 #### 插件列表
 
-序号 | 插件名称 | 作者 | 作用 
+序号 | 插件名称(Twitch地址) | 作者 | 作用 
 ---  | ------ | ---- 
 1 | [Deadly Boss Mods (DBM)](https://www.curseforge.com/wow/addons/deadly-boss-mods) | Tandanu , DBM_Build , Tandanu | 副本报警 
 2 | [Rematch](https://www.curseforge.com/wow/addons/rematch) | Gello | 小宠物对战，收集
@@ -27,6 +27,10 @@ tags:
 12 | [TinyInspect](https://www.curseforge.com/wow/addons/itemlevel-anywhere) | loudsoul | 显示装等，装备列表
 13 | [TipTac](https://www.curseforge.com/wow/addons/tip-tac) | Aezay | 鼠标提示UI美化 
 14 | [Mapster](https://www.curseforge.com/wow/addons/mapster) | Nevcairiel | 地图显示玩家坐标，鼠标坐标 
+15 | [BugSack](https://www.curseforge.com/wow/addons/bug-grabber) | funkehdude | 错误日志的图形界面,依赖于BugGrabber
+16 | [BugGrabber](https://www.curseforge.com/wow/addons/bug-grabber) | funkehdude | 收集插件的错误日志
+17 | [SellJunk](https://www.wowace.com/projects/sell-junk) | cbenneh | 自动售出垃圾
+18 | [Skada Damage Meter](https://www.wowace.com/projects/skada) | zarnivoop , _ForgeUser405586 , funkehdude | 老牌伤害统计插件
 
 * * * 
 
