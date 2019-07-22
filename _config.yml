@@ -83,7 +83,7 @@ deploy:
   repo: https://github.com/Mary526/Mary526.github.io.git
   branch: master
 
-# 2018/11/14 Local search
+# 2018/11/14 Local search 本地查询插件
 search:
   path: search.xml
   field: post
@@ -91,7 +91,7 @@ search:
   limit: 10000
 
 
-# 2018/11/15 加入萌萌宠物
+# 2018/11/15 加入萌萌宠物插件
 # Live2D
 ## https://github.com/EYHN/hexo-helper-live2d
 live2d:
@@ -109,7 +109,7 @@ live2d:
     opacityDefault: 1
     opacityOnHover: 0.2
 
-# 2018/1127 githubEmojis
+# 2018/11/27 githubEmojis emojis插件
 githubEmojis:
   enable: true
   className: github-emoji
