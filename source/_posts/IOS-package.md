@@ -6,7 +6,7 @@ tags:
 - 企业
 - 证书
 categories:
-- Technical Posts 1 
+- Technical Posts
 ---
 
 > 这篇文章仅供自己记录
