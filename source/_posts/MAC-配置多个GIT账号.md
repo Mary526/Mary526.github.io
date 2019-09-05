@@ -35,7 +35,7 @@ tags:
 4|`ssh-keygen -t rsa -C "yyy@mail.com"`|根据账户生成密钥
 5|`ssh-add ~/.ssh/id_rsa_github`|将GitHub私钥添加到本地
 6|`touch config`|创建config文件 
-7|`ssh -T git@github.com`|测试SSH配置1
+7|`ssh -T git@github.com`|测试SSH配置
 
 # 配置步骤
 ## 对每个账户生成一对密钥
