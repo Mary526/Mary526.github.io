@@ -108,4 +108,4 @@ ssh -T git@aliyun
 ## 参考文档
 - [Mac 上配置多个git账号](https://www.jianshu.com/p/698f82e72415) - [Kandy_JS](https://www.jianshu.com/u/132996324c3c)
 - [Mac下配置多个Git账户](https://segmentfault.com/a/1190000016269686) - [程序员不止程序猿](https://segmentfault.com/u/liugui1993)
-
+- [一个电脑对应两个Github帐户](https://www.jianshu.com/p/bae25a63f220) - [ForeverCy](https://www.jianshu.com/u/9dddce8d6f63)
