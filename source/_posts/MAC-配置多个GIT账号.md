@@ -25,6 +25,8 @@ tags:
 6|`touch config`|创建config文件 
 7|`ssh -T git@github.com`|测试SSH配置
 8|`pbcopy < ~/.ssh/id_rsa_github.pub`|复制公钥
+8|`cat  ~/.ssh/id_rsa_github.pub`|查看并复制公钥
+
 
 # 流程
 ## 准备工作
@@ -109,3 +111,4 @@ ssh -T git@aliyun
 - [Mac 上配置多个git账号](https://www.jianshu.com/p/698f82e72415) - [Kandy_JS](https://www.jianshu.com/u/132996324c3c)
 - [Mac下配置多个Git账户](https://segmentfault.com/a/1190000016269686) - [程序员不止程序猿](https://segmentfault.com/u/liugui1993)
 - [一个电脑对应两个Github帐户](https://www.jianshu.com/p/bae25a63f220) - [ForeverCy](https://www.jianshu.com/u/9dddce8d6f63)
+- [https://my.oschina.net/wolx/blog/755595](https://my.oschina.net/wolx/blog/755595) - [卧龙小](https://my.oschina.net/wolx)
