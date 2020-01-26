@@ -71,6 +71,8 @@ per_page: 10
 pagination_dir: page
 
 # Extensions
+## https://github.com/theme-next/hexo-theme-next
+## git clone https://github.com/theme-next/hexo-theme-next themes/next
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next

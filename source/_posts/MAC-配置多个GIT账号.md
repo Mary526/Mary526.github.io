@@ -38,8 +38,8 @@ git conifg --list //查看已配置的git列表
 ```
 
 ``` shell script
-git config --global user.name  // 清空默认的用户名和邮箱
-git config --global user.email
+git config --global --unset user.name // 清空默认的用户名
+git config --global --unset user.email // 清空默认的邮箱
 ```
  
 ## 给不同的git账户生成ssh-key
@@ -48,7 +48,7 @@ git config --global user.email
 
 ``` shell script
 cd ~/.ssh //进入目录，该目录下保存生成的秘钥
-ssh-keygent -t rsa -C "yyy@mail.com"  //根据邮箱生成秘钥
+ssh-keygen -t rsa -C "yyy@mail.com"  //根据邮箱生成秘钥
 ```
 
 git是根据邮箱来统计提交数目的。输入后按enter键
