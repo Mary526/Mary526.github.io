@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mary526.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="&amp;#x524D;&amp;#x8A00;&amp;#x2003;&amp;#x2003;&amp;#x8FD9;&amp;#x91CC;&amp;#x7A0D;&amp;#x5FAE;&amp;#x8BB0;&amp;#x5F55;&amp;#x4E00;&amp;#x4E0B;&amp;#x4E2A;&amp;#x4EBA;&amp;#x4E3B;&amp;#x8981;&amp;#x4F7F;&amp;#x7528;&amp;#x7684;&amp;#x63D2;&amp;#x4EF6;&amp;#x5217;&amp;#x8868;&amp;#xFF0C;&amp;#x672C;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="插件之WOW">
+<meta property="og:url" content="https://mary526.github.io/2018/12/09/%E6%8F%92%E4%BB%B6%E4%B9%8BWOW/index.html">
+<meta property="og:site_name" content="Mary526&#39;s blog">
+<meta property="og:description" content="&amp;#x524D;&amp;#x8A00;&amp;#x2003;&amp;#x2003;&amp;#x8FD9;&amp;#x91CC;&amp;#x7A0D;&amp;#x5FAE;&amp;#x8BB0;&amp;#x5F55;&amp;#x4E00;&amp;#x4E0B;&amp;#x4E2A;&amp;#x4EBA;&amp;#x4E3B;&amp;#x8981;&amp;#x4F7F;&amp;#x7528;&amp;#x7684;&amp;#x63D2;&amp;#x4EF6;&amp;#x5217;&amp;#x8868;&amp;#xFF0C;&amp;#x672C;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-12-09T14:38:17.000Z">
+<meta property="article:modified_time" content="2021-07-02T06:18:47.116Z">
+<meta property="article:author" content="Mary526">
+<meta property="article:tag" content="插件">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://mary526.github.io/2018/12/09/%E6%8F%92%E4%BB%B6%E4%B9%8BWOW/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>插件之WOW | Mary526's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Mary526's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mary526.github.io/2018/12/09/%E6%8F%92%E4%BB%B6%E4%B9%8BWOW/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mary526">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mary526's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          插件之WOW
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-12-09 22:38:17" itemprop="dateCreated datePublished" datetime="2018-12-09T22:38:17+08:00">2018-12-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-07-02 14:18:47" itemprop="dateModified" datetime="2021-07-02T14:18:47+08:00">2021-07-02</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h4 id="&#x524D;&#x8A00;"><a href="#&#x524D;&#x8A00;" class="headerlink" title="&#x524D;&#x8A00;"></a>&#x524D;&#x8A00;</h4><p>&#x2003;&#x2003;&#x8FD9;&#x91CC;&#x7A0D;&#x5FAE;&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;&#x4E2A;&#x4EBA;&#x4E3B;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x63D2;&#x4EF6;&#x5217;&#x8868;&#xFF0C;&#x672C;&#x6587;&#x4EC5;&#x9488;&#x5BF9;&#x9B54;&#x517D;&#x3002;&#x63D2;&#x4EF6;&#x4E3B;&#x8981;&#x6765;&#x6E90;&#x662F;<a href="https://wow.curseforge.com/" target="_blank" rel="noopener">curse</a>&#x548C;<a href="https://ngabbs.com/thread.php?fid=200" target="_blank" rel="noopener">NGA</a>&#x7684;&#x63D2;&#x4EF6;&#x533A;&#x3002;&#x6211;&#x8BB0;&#x5F97;&#x4E4B;&#x524D;curse&#x662F;&#x6709;&#x72EC;&#x7ACB;&#x7684;&#x4E0B;&#x8F7D;&#x5668;&#x3002;&#x540E;&#x6765;curse&#x88AB;twitch<a href="https://blog.twitch.tv/twitch-and-curse-8ae2b20acf91" target="_blank" rel="noopener">&#x6536;&#x8D2D;</a>&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4E0B;&#x8F7D;twitch&#x8D26;&#x6237;&#xFF0C;&#x767B;&#x5F55;twitch&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x6765;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;&#x3002;<br>&#x56E0;&#x4E3A;&#x5E76;&#x4E0D;&#x6253;&#x7B97;&#x6253;&#x56E2;&#x672C;&#xFF0C;&#x4E5F;&#x6CA1;&#x6709;&#x6253;PJ&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x9700;&#x8981;&#x6E38;&#x620F;&#x4E0D;&#x7ECF;&#x5E38;&#x62A5;&#x9519;&#xFF0C;&#x6211;&#x5C31;&#x5FC3;&#x6EE1;&#x610F;&#x8DB3;&#x60F9;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x8FD8;&#x662F;&#x559C;&#x6B22;&#x505A;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4F38;&#x624B;&#x515A;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x5728;curse&#x66F4;&#x65B0;&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x6211;&#x57FA;&#x672C;&#x4E0D;&#x4F7F;&#x7528;&#x2014;&#x2014;&#x2014;&#x2014;&#x9664;&#x975E;&#x6211;&#x975E;&#x5E38;&#x559C;&#x6B22;&#x90A3;&#x9879;&#x529F;&#x80FD;&#x3002;</p>
+<hr>
+<h4 id="&#x80CC;&#x666F;"><a href="#&#x80CC;&#x666F;" class="headerlink" title="&#x80CC;&#x666F;"></a>&#x80CC;&#x666F;</h4><ul>
+<li>&#x9B54;&#x517D;&#x7248;&#x672C;&#xFF1A;8.0.1</li>
+<li>&#x73B0;&#x5728;&#x65F6;&#x95F4;&#xFF1A;2018/12/18</li>
+</ul>
+<hr>
+<h4 id="&#x63D2;&#x4EF6;&#x5217;&#x8868;"><a href="#&#x63D2;&#x4EF6;&#x5217;&#x8868;" class="headerlink" title="&#x63D2;&#x4EF6;&#x5217;&#x8868;"></a>&#x63D2;&#x4EF6;&#x5217;&#x8868;</h4><p>&#x5E8F;&#x53F7; | &#x63D2;&#x4EF6;&#x540D;&#x79F0;(Twitch&#x5730;&#x5740;) | &#x4F5C;&#x8005; | &#x4F5C;&#x7528;<br>&#x2014;  | &#x2014;&#x2014; | &#x2014;-<br>1 | <a href="https://www.curseforge.com/wow/addons/deadly-boss-mods" target="_blank" rel="noopener">Deadly Boss Mods (DBM)</a> | Tandanu , DBM_Build , Tandanu | &#x526F;&#x672C;&#x62A5;&#x8B66;<br>2 | <a href="https://www.curseforge.com/wow/addons/rematch" target="_blank" rel="noopener">Rematch</a> | Gello | &#x5C0F;&#x5BA0;&#x7269;&#x5BF9;&#x6218;&#xFF0C;&#x6536;&#x96C6;<br>3 | <a href="https://www.curseforge.com/wow/addons/announce-interrupts" target="_blank" rel="noopener">Announce Interrupts</a> | jostor | &#x901A;&#x62A5;&#x6253;&#x65AD;&#x6280;&#x80FD;<br>4 | <a href="https://www.curseforge.com/wow/addons/bagnon" target="_blank" rel="noopener">Bagnon</a> | Tuller&#xFF0C;Jaliborc | &#x80CC;&#x5305;&#x6574;&#x5408;<br>5 | <a href="https://www.curseforge.com/wow/addons/battle-pet-battle-stats" target="_blank" rel="noopener">Battle Pet Battle Stats</a> | Gello | &#x5BA0;&#x7269;&#x4F5C;&#x6218;&#xFF0C;&#x663E;&#x793A;&#x72B6;&#x6001;<br>6 | <a href="https://www.curseforge.com/wow/addons/easy-frames" target="_blank" rel="noopener">Easy Frames</a> | Usoltsev | &#x5934;&#x50CF;&#x7F8E;&#x5316;<br>7 | <a href="https://www.curseforge.com/wow/addons/petleash" target="_blank" rel="noopener">PetLeash</a> | endwashere | &#x81EA;&#x52A8;&#x5207;&#x6362;&#x5C0F;&#x5BA0;&#x7269;<br>8 | <a href="https://www.curseforge.com/wow/addons/pettracker" target="_blank" rel="noopener">PetTracker</a> | Jaliborc | &#x8DDF;&#x8E2A;&#x5C0F;&#x5BA0;&#x7269;&#x6536;&#x96C6;<br>9 | <a href="https://www.curseforge.com/wow/addons/recount" target="_blank" rel="noopener">Recount</a> | Resike, Cryect, Elsia | &#x7EDF;&#x8BA1;&#x6218;&#x6597;&#x6570;&#x636E;<br>10 | <a href="https://www.curseforge.com/wow/addons/shooter" target="_blank" rel="noopener">Shooter</a> | Akcent | &#x83B7;&#x53D6;&#x6210;&#x5C31;&#x65F6;&#x622A;&#x56FE;<br>11 | <a href="https://www.curseforge.com/wow/addons/sorhaquestlog" target="_blank" rel="noopener">SorhaQuestLog</a> | Sorha2 | &#x5B8C;&#x6210;&#x4EFB;&#x52A1;&#x65F6;&#x5C0F;&#x961F;&#x901A;&#x544A;<br>12 | <a href="https://www.curseforge.com/wow/addons/itemlevel-anywhere" target="_blank" rel="noopener">TinyInspect</a> | loudsoul | &#x663E;&#x793A;&#x88C5;&#x7B49;&#xFF0C;&#x88C5;&#x5907;&#x5217;&#x8868;<br>13 | <a href="https://www.curseforge.com/wow/addons/tip-tac" target="_blank" rel="noopener">TipTac</a> | Aezay | &#x9F20;&#x6807;&#x63D0;&#x793A;UI&#x7F8E;&#x5316;<br>14 | <a href="https://www.curseforge.com/wow/addons/mapster" target="_blank" rel="noopener">Mapster</a> | Nevcairiel | &#x5730;&#x56FE;&#x663E;&#x793A;&#x73A9;&#x5BB6;&#x5750;&#x6807;&#xFF0C;&#x9F20;&#x6807;&#x5750;&#x6807;<br>15 | <a href="https://www.curseforge.com/wow/addons/bug-grabber" target="_blank" rel="noopener">BugSack</a> | funkehdude | &#x9519;&#x8BEF;&#x65E5;&#x5FD7;&#x7684;&#x56FE;&#x5F62;&#x754C;&#x9762;,&#x4F9D;&#x8D56;&#x4E8E;BugGrabber<br>16 | <a href="https://www.curseforge.com/wow/addons/bug-grabber" target="_blank" rel="noopener">BugGrabber</a> | funkehdude | &#x6536;&#x96C6;&#x63D2;&#x4EF6;&#x7684;&#x9519;&#x8BEF;&#x65E5;&#x5FD7;<br>17 | <a href="https://www.wowace.com/projects/sell-junk" target="_blank" rel="noopener">SellJunk</a> | cbenneh | &#x81EA;&#x52A8;&#x552E;&#x51FA;&#x5783;&#x573E;<br>18 | <a href="https://www.wowace.com/projects/skada" target="_blank" rel="noopener">Skada Damage Meter</a> | zarnivoop , _ForgeUser405586 , funkehdude | &#x8001;&#x724C;&#x4F24;&#x5BB3;&#x7EDF;&#x8BA1;&#x63D2;&#x4EF6;</p>
+<hr>
+<h4 id="&#x6211;&#x559C;&#x6B22;&#x7684;&#x63D2;&#x4EF6;"><a href="#&#x6211;&#x559C;&#x6B22;&#x7684;&#x63D2;&#x4EF6;" class="headerlink" title="&#x6211;&#x559C;&#x6B22;&#x7684;&#x63D2;&#x4EF6;"></a>&#x6211;&#x559C;&#x6B22;&#x7684;&#x63D2;&#x4EF6;</h4><h5 id="PetLeash"><a href="#PetLeash" class="headerlink" title="PetLeash"></a>PetLeash</h5><p>&#x4F1A;&#x5B9A;&#x65F6;&#x53EC;&#x5524;&#x5C0F;&#x5BA0;&#x7269;&#xFF0C;&#x8FD8;&#x86EE;&#x6709;&#x610F;&#x601D;&#x3002;</p>
+<h5 id="TipTac"><a href="#TipTac" class="headerlink" title="TipTac"></a>TipTac</h5><p>&#x9F20;&#x6807;&#x63D0;&#x793A;&#x7684;&#x4F18;&#x5316;&#x8FC7;&#x7684;UI&#xFF0C;&#x8D85;&#x68D2;&#x7684;&#xFF0C;&#x5C31;&#x662F;&#x4E0D;&#x80FD;&#x591F;&#x770B;&#x5230;&#x88C5;&#x7B49;&#x3002;</p>
+<h5 id="SorhaQuestLog"><a href="#SorhaQuestLog" class="headerlink" title="SorhaQuestLog"></a>SorhaQuestLog</h5><p>&#x663E;&#x793A;&#x4EFB;&#x52A1;&#xFF0C;&#x539F;&#x6765;&#x6211;&#x559C;&#x6B22;&#x7528;&#x5927;&#x811A;&#x7684;&#x901A;&#x62A5;&#x4EFB;&#x52A1;&#x7684;&#x4E00;&#x4E2A;&#x5C0F;&#x529F;&#x80FD;&#x3002;</p>
+<h5 id="TinyInspect"><a href="#TinyInspect" class="headerlink" title="TinyInspect"></a>TinyInspect</h5><p>&#x663E;&#x793A;&#x4EBA;&#x7269;&#x7269;&#x54C1;&#x88C5;&#x7B49;&#xFF0C;&#x4EBA;&#x7269;&#x9762;&#x677F;&#x589E;&#x52A0;&#x88C5;&#x5907;&#x680F;&#xFF0C;&#x80FD;&#x63D0;&#x793A;&#x88C5;&#x5907;&#x662F;&#x5426;&#x9644;&#x9B54;&#x4E86;&#x3002;&#x975E;&#x5E38;&#x5B9E;&#x7528;&#x7684;&#x4E00;&#x6B3E;&#x63D2;&#x4EF6;&#xFF0C;&#x4F46;&#x662F;&#x56E0;&#x4E3A;&#x4F5C;&#x8005;&#x4E60;&#x60EF;&#x5728;NGA&#x4E0A;&#x66F4;&#x65B0;&#x63D2;&#x4EF6;&#xFF0C;&#x800C;&#x4E0D;&#x76F4;&#x63A5;&#x5728;twitch&#x4E0A;&#x63D0;&#x4EA4;&#x7248;&#x672C;&#xFF0C;&#x6240;&#x4EE5;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x90FD;&#x9700;&#x8981;&#x4EBA;&#x8089;&#x66F4;&#x65B0;&#xFF0C;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;&#xFF0C;&#x6211;&#x73B0;&#x5728;&#x6B63;&#x5728;&#x5BFB;&#x627E;&#x66FF;&#x4EE3;&#x54C1;&#x3002;</p>
+<hr>
+<h4 id="&#x53C2;&#x8003;&#x94FE;&#x63A5;"><a href="#&#x53C2;&#x8003;&#x94FE;&#x63A5;" class="headerlink" title="&#x53C2;&#x8003;&#x94FE;&#x63A5;"></a>&#x53C2;&#x8003;&#x94FE;&#x63A5;</h4><p><a href="https://www.ifanr.com/703795" target="_blank" rel="noopener">&#x4E9A;&#x9A6C;&#x900A;&#x6B64;&#x524D;&#x6536;&#x8D2D;&#x7684; Twitch&#xFF0C;&#x73B0;&#x5728;&#x5F97;&#x4E86; &#x201C;&#x8BC5;&#x5492;&#x201D;</a><br><a href="https://ngabbs.com/read.php?pid=278254553" target="_blank" rel="noopener">&#x77E5;&#x9053;Easy Frames&#x7684;&#x5730;&#x65B9;</a><br><a href="https://ngabbs.com/read.php?tid=10150474" target="_blank" rel="noopener">[&#x754C;&#x9762;&#x5206;&#x4EAB;][&#x7EAF;&#x5355;&#x4F53;&#x63D2;&#x4EF6;&#x6574;&#x5408;][8.0][2018-11-18]&#x7B80;&#x6D01;&#x2026;&#x2026;&#x81EA;&#x7528;&#x6574;&#x5408;&#x63D2;&#x4EF6;&#x2026;&#x2026;&#x6301;&#x7EED;&#x66F4;&#x65B0;ing</a><br><a href="https://nga.178.com/read.php?tid=9632817" target="_blank" rel="noopener">[oUF] [&#x754C;&#x9762;&#x5206;&#x4EAB;] oUF_Abu &#x4F5C;&#x8005;7&#x6708;26&#x65E5;&#x66F4;&#x65B0;,7.03&#x53EF;&#x7528;(&#x53E6;&#x5916;&#x4FEE;&#x6539;&#x4E86;&#x663E;&#x793A;&#x5355;&#x4F4D;&#x4E3A;&#x4E07;)</a><br><a href="https://www.wowinterface.com/downloads/info23020-oUFAbu.html#info" target="_blank" rel="noopener">oUF Abu&#x7684;WOW Head&#x5730;&#x5740;</a><br><a href="https://github.com/Sticklord/oUF_Abu" target="_blank" rel="noopener">oUF_Abu&#x6E90;&#x7801;&#x5730;&#x5740;</a><br><a href="https://bbs.nga.cn/read.php?tid=7496247" target="_blank" rel="noopener">[&#x6700;&#x65B0;&#x8D44;&#x8BAF;]8.0&#x5BA0;&#x7269;&#x63D2;&#x4EF6;&#xFF1A;Rematch(&#x6218;&#x961F;&#x4FDD;&#x5B58;)&#xFF0C;Battle Pet Daily Tamer(&#x9A6F;&#x5BA0;&#x5E08;&#x4F4D;&#x7F6E;)&#x7B49;&#x2014;&#x2014;20181204&#x66F4;&#x65B0;Rematch&#x914D;&#x961F;&#x6587;&#x5B57;&#x5BFC;&#x5165;&#x7248;</a><br><a href="https://bbs.nga.cn/read.php?tid=6966921&amp;page=e" target="_blank" rel="noopener">[&#x754C;&#x9762;] [&#x8F85;&#x52A9;] [&#x5176;&#x5B83;] Battle Pet Current Stats for 8.0 &#x5BA0;&#x7269;&#x5BF9;&#x6218;&#x754C;&#x9762;&#x589E;&#x5F3A; 2018.7.29 &#x66F4;&#x65B0;</a><br><a href="https://bbs.nga.cn/read.php?tid=10240957" target="_blank" rel="noopener">[8.0] &#x66F4;&#x65B0;&#x7248;&#x672C; (TinyChat&#x804A;&#x5929;)(TinyInspect&#x88C5;&#x7B49;)(TinyTooltip&#x9F20;&#x6807;)(TinyCharacterStats&#x500B;&#x4EBA;&#x9762;&#x677F;&#x589E;&#x5F37;)(TinyUntitled&#x5927;&#x6742;&#x70E9;)</a></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%8F%92%E4%BB%B6/" rel="tag"># 插件</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/11/30/%E5%8D%8E%E7%A1%95%E5%9B%BA%E4%BB%B6%E5%88%B7%E6%A2%85%E6%9E%97/" rel="prev" title="华硕固件刷梅林">
+      <i class="fa fa-chevron-left"></i> 华硕固件刷梅林
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2018/12/18/%E6%8F%92%E4%BB%B6%E4%B9%8BMAC/" rel="next" title="插件之MAC">
+      插件之MAC <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#&#x524D;&#x8A00;"><span class="nav-number">1.</span> <span class="nav-text">&amp;#x524D;&amp;#x8A00;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#&#x80CC;&#x666F;"><span class="nav-number">2.</span> <span class="nav-text">&amp;#x80CC;&amp;#x666F;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#&#x63D2;&#x4EF6;&#x5217;&#x8868;"><span class="nav-number">3.</span> <span class="nav-text">&amp;#x63D2;&amp;#x4EF6;&amp;#x5217;&amp;#x8868;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#&#x6211;&#x559C;&#x6B22;&#x7684;&#x63D2;&#x4EF6;"><span class="nav-number">4.</span> <span class="nav-text">&amp;#x6211;&amp;#x559C;&amp;#x6B22;&amp;#x7684;&amp;#x63D2;&amp;#x4EF6;</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#PetLeash"><span class="nav-number">4.1.</span> <span class="nav-text">PetLeash</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#TipTac"><span class="nav-number">4.2.</span> <span class="nav-text">TipTac</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#SorhaQuestLog"><span class="nav-number">4.3.</span> <span class="nav-text">SorhaQuestLog</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#TinyInspect"><span class="nav-number">4.4.</span> <span class="nav-text">TinyInspect</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#&#x53C2;&#x8003;&#x94FE;&#x63A5;"><span class="nav-number">5.</span> <span class="nav-text">&amp;#x53C2;&amp;#x8003;&amp;#x94FE;&amp;#x63A5;</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Mary526</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mary526</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false},"react":{"opacityDefault":1,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
