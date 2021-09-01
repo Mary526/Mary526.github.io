@@ -1,17 +1,25 @@
 ---
-title: 更新日志
-date: 2018-11-28 09:51:29 
-comments: false
+title: 关于我
+date: 2021-09-01 15:14:10
 ---
-###### [2021/9/1] 更新日志
+
+# About me
+
+a web designer 
+contact me：greyson7@yeah.net
+
+# Update logs
+
+## [2021/9/1] 
 - 新增博客三篇
 - 添加"关于我"、"标签"页
 - 修改主题配色
+- 参考文章[hexo 发布常用命令](https://www.jianshu.com/p/8cd8de293da3)、[hexo的next创建关于我](https://www.jianshu.com/p/e4330a081030)
 
-###### [2018/12/17] 更新日志
+## [2018/12/17]  
 - 增加插件[hexo-blog-encrypt](https://github.com/MikeCoder/hexo-blog-encrypt)，方便给日志加密。参考文章[Hexo 博客加密功能添加](http://zhailiange.com/2017/07/06/hexo-encrypt/)
 
-###### [2018/11/27] 更新日志
+## [2018/11/27] 
 - 新增博客日志七篇
 - 增加[不蒜子插件](https://theme-next.iissnan.com/third-party-services.html)，参考文章[《Hexo-Next搭建个人博客（添加统计访客量以及文章阅读量）》](https://yfzhou.coding.me/2018/08/08/Hexo-Next%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E6%B7%BB%E5%8A%A0%E7%BB%9F%E8%AE%A1%E8%AE%BF%E5%AE%A2%E9%87%8F%E4%BB%A5%E5%8F%8A%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%EF%BC%89/)；并解决了其不显示的bug，[查看解决方案](https://blog.csdn.net/stormdony/article/details/82980320)、[《Hexo Next 解决 Busuanzi 统计浏览失效》](https://blog.csdn.net/ddydavie/article/details/83020549)
 - 设置了博文版权声明，参考文章[《在Hexo中为文章自动添加版权信息声明模块》](https://blog.csdn.net/qinyuanpei/article/details/49863273)，增加留言板板块。
@@ -20,12 +28,12 @@ comments: false
 - 将博客源文件保存至[hexo分支](https://github.com/Mary526/Mary526.github.io/tree/hexo)
 - 增加友情链接，参考文章[《Hexo Next主题添加友情链接》](https://www.jianshu.com/p/57dd558b2b42)
 
-###### [2018/11/15] 更新日志
+## [2018/11/15] 
 - 新增博客日志四篇
 - 增加插件[hexo-helper-live2d](https://github.com/EYHN/hexo-helper-live2d)，参考文章[《hexo中yilia主题添加和取消live2d看板动画》](https://blog.csdn.net/stormdony/article/details/82558104)
 - 增加插件[hexo-generator-searchdb](https://github.com/theme-next/hexo-generator-searchdb)，参考文章[《hexo - Next 主题添加搜索功能》](https://yashuning.github.io/2018/06/29/hexo-Next-%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/)
 - 增加插件[browser-sync](https://www.browsersync.io/)，参考文档[《Hexo 利用 browsersync 进行自动刷新》](https://blog.singee.me/2018/05/16/hexo-auto-refresh/)
 
-###### [2018/11/14] 更新日志
+## [2018/11/14] 
 - 博客搭建，参考文章[《GitHub+Hexo 搭建个人网站详细教程》](https://zhuanlan.zhihu.com/p/26625249)、[《Hexo+Next个人博客主题优化》](https://www.jianshu.com/p/efbeddc5eb19)、[《
 hexo的next主题个性化教程：打造炫酷网站》](https://blog.csdn.net/qq_33699981/article/details/72716951)、[《hexo的next主题个性化配置教程》](https://segmentfault.com/a/1190000009544924)、[《hexo博客搭建时遇到的一些问题》](https://segmentfault.com/a/1190000003710962)
