@@ -3,12 +3,12 @@ title: 关于我
 date: 2021-09-01 15:14:10
 ---
 
-# About me
+# 关于我  
 
 a web designer 
 contact me：greyson7@yeah.net
 
-# Update logs
+# 更新日志  
 
 ## [2021/9/1] 
 - 新增博客三篇

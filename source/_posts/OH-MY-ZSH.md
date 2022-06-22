@@ -11,6 +11,7 @@ categories:
 ![完成图](http://imglf1.nosdn.127.net/img/RE1iZDZ5cUNZaTd4VzNtSFlGTm5CZVdHMjMwU2ZySnVScCtuTFdFYUZ6cndUZXJqUGxvclJBPT0.png?=imageView&thumbnail=500x0&quality=96&stripmeta=0&type=jpg%7Cwatermark&type=2)
 
 只是一点想说的废话吧，这个配置教程是需要有一些`linux`命令行的基础，然后需要了解下`OSX`这个系统，系统文件是隐藏状态这个属性。因为是针对我个人的一个技术纪录，所以仅作参考。
+<!-- more -->
 
 本帖基于[此贴](https://laoshuterry.gitbooks.io/mac_os_setup_guide/content/4_ZshConfig.html)进行讲解：
 

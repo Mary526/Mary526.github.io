@@ -7,7 +7,7 @@ tags: 插件
 
 &emsp;&emsp;这里稍微记录一下个人主要使用的插件列表，本文仅针对魔兽。插件主要来源是[curse](https://wow.curseforge.com/)和[NGA](https://ngabbs.com/thread.php?fid=200)的插件区。我记得之前curse是有独立的下载器。后来curse被twitch[收购](https://blog.twitch.tv/twitch-and-curse-8ae2b20acf91)了，所以可以直接下载twitch账户，登录twitch客户端，来安装插件。
 因为并不打算打团本，也没有打PJ的需求，所以只需要游戏不经常报错，我就心满意足惹。另外，还是喜欢做一个简单的伸手党，所以不在curse更新的插件，我基本不使用————除非我非常喜欢那项功能。
-
+<!-- more -->
 * * * 
 
 #### 背景
@@ -18,7 +18,7 @@ tags: 插件
 #### 插件列表
 
 序号 | 插件名称(Twitch地址) | 作者 | 作用 
----  | ------ | ---- 
+---  | ------ | ---- | ----
 1 | [Deadly Boss Mods (DBM)](https://www.curseforge.com/wow/addons/deadly-boss-mods) | Tandanu , DBM_Build , Tandanu | 副本报警 
 2 | [Rematch](https://www.curseforge.com/wow/addons/rematch) | Gello | 小宠物对战，收集
 3 | [Announce Interrupts](https://www.curseforge.com/wow/addons/announce-interrupts) | jostor | 通报打断技能

@@ -9,6 +9,7 @@ categories:
 ---
 
 **Project objective :** plant OSX(10.11), Xcode(7.2), ionic(1.7.7)and cordova(5.3.3) in virtual machine.
+<!-- more -->
 
 **Building environment :** Windows 10
 
