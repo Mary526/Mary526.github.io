@@ -11,6 +11,9 @@ contact me：greyson7@yeah.net
 # 留言板
 欢迎在下面给我留言哦，一起影评电影～
 
+[//]: # (![background.jpg]&#40;http://amier.asuscomm.com:6391/images/2022/09/15/background.jpg&#41;)
+![background.jpg](https://hutianhua.com:6395/images/2022/09/15/background.jpg)
+
 # 更新日志  
 
 ## [2021/9/1] 
