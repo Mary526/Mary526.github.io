@@ -6,7 +6,7 @@ date: 2021-09-01 15:14:10
 # 关于我  
 
 a web designer 
-contact me：greyson7@yeah.net
+contact me：greyson7@yeah.net / https://t.me/mary526Hu
 
 # 留言板
 欢迎在下面给我留言哦，一起影评电影～
