@@ -86,11 +86,12 @@ deploy:
   branch: master
 
 # 2018/11/14 Local search 本地查询插件
+# 2022/9/28 重新启用
 search:
-  path: search.xml
+  path: search.json #之前就是这里出了问题导致图标错误，错误的教程是 search.xml
   field: post
   format: html
-  limit: 10000
+  limit: 1000
 
 
 # 2018/11/15 加入萌萌宠物插件

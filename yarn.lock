@@ -2020,7 +2020,7 @@ hexo-generator-index@^0.2.1:
     hexo-pagination "0.0.2"
     object-assign "^4.0.1"
 
-hexo-generator-searchdb@^1.0.8:
+hexo-generator-searchdb@^1.4.0:
   version "1.4.0"
   resolved "https://registry.npmmirror.com/hexo-generator-searchdb/-/hexo-generator-searchdb-1.4.0.tgz#e6774378d841cbaa6ccbc8206ce14a492b3a115e"
   integrity sha512-TkwxlqxptRIXHwYeI/V32O2TxXkfqWa37Rrmg347Q+YT1eqk7vQ31vR4zLudBAcSr85ST0VUedYd1/gLBSJl9Q==
