@@ -1,6 +1,7 @@
 ---
 title: 插件之WOW 二
 date: 2022-06-22 18:25:42
+categories: 游戏
 tags: 
  - 插件 
  - WOW

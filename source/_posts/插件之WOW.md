@@ -1,6 +1,7 @@
 ---
 title: 插件之WOW
 date: 2018-12-09 22:38:17
+categories: 游戏
 tags: 
 - 插件
 - WOW

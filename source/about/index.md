@@ -6,7 +6,7 @@ date: 2021-09-01 15:14:10
 # 关于我  
 
 a web designer 
-contact me：greyson7@yeah.net / https://t.me/mary526Hu
+contact me：https://t.me/mary526Hu
 
 # 留言板
 欢迎在下面给我留言哦，一起影评电影～
@@ -15,6 +15,9 @@ contact me：greyson7@yeah.net / https://t.me/mary526Hu
 ![background.jpg](https://hutianhua.com:6395/images/2022/09/15/background.jpg)
 
 # 更新日志  
+## [2022/9/30]
+- 搬运博文两篇
+- hexo升级至6.3.0
 
 ## [2021/9/1] 
 - 新增博客三篇
