@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mary526.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+  </script>
+
+  <meta name="description" content="第一次有了想要了解自己手下的操着一口二进制乡音的“兄弟”的念头，大概是有次传参数时，发现和库里数值对不上，查了好一会资料，才发现受js语言限制，处理长度超过十六的数据会丢失精度。那时对数据计算有了模模糊糊的“愤怒”，不知是气自己的无知，还是气这个“不完美”的世界哈哈。 技术一定是为解放生产力而被驱动着发展，二战期间，以图灵为代表的数独爱好者，逻辑家、语言家，数学家们等在一股力量的集结下，都在为破译">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法集训营第二期｜-保持做题保持呼吸">
+<meta property="og:url" content="https://mary526.github.io/2021/12/12/%E7%AE%97%E6%B3%95%E9%9B%86%E8%AE%AD%E8%90%A5%E7%AC%AC%E4%BA%8C%E6%9C%9F%EF%BD%9C-%E4%BF%9D%E6%8C%81%E5%81%9A%E9%A2%98%E4%BF%9D%E6%8C%81%E5%91%BC%E5%90%B8/index.html">
+<meta property="og:site_name" content="Mary526&#39;s blog">
+<meta property="og:description" content="第一次有了想要了解自己手下的操着一口二进制乡音的“兄弟”的念头，大概是有次传参数时，发现和库里数值对不上，查了好一会资料，才发现受js语言限制，处理长度超过十六的数据会丢失精度。那时对数据计算有了模模糊糊的“愤怒”，不知是气自己的无知，还是气这个“不完美”的世界哈哈。 技术一定是为解放生产力而被驱动着发展，二战期间，以图灵为代表的数独爱好者，逻辑家、语言家，数学家们等在一股力量的集结下，都在为破译">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-12-11T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-11-15T08:03:02.721Z">
+<meta property="article:author" content="Mary526">
+<meta property="article:tag" content="力扣">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="算法集训营第二期">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://mary526.github.io/2021/12/12/%E7%AE%97%E6%B3%95%E9%9B%86%E8%AE%AD%E8%90%A5%E7%AC%AC%E4%BA%8C%E6%9C%9F%EF%BD%9C-%E4%BF%9D%E6%8C%81%E5%81%9A%E9%A2%98%E4%BF%9D%E6%8C%81%E5%91%BC%E5%90%B8/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>算法集训营第二期｜-保持做题保持呼吸 | Mary526's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Mary526's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mary526.github.io/2021/12/12/%E7%AE%97%E6%B3%95%E9%9B%86%E8%AE%AD%E8%90%A5%E7%AC%AC%E4%BA%8C%E6%9C%9F%EF%BD%9C-%E4%BF%9D%E6%8C%81%E5%81%9A%E9%A2%98%E4%BF%9D%E6%8C%81%E5%91%BC%E5%90%B8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mary526">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mary526's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          算法集训营第二期｜-保持做题保持呼吸
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-12-12 00:00:00" itemprop="dateCreated datePublished" datetime="2021-12-12T00:00:00+08:00">2021-12-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-11-15 16:03:02" itemprop="dateModified" datetime="2022-11-15T16:03:02+08:00">2022-11-15</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>第一次有了想要了解自己手下的操着一口二进制乡音的“兄弟”的念头，大概是有次传参数时，发现和库里数值对不上，查了好一会资料，才发现受js语言限制，处理长度超过十六的数据会丢失精度。那时对数据计算有了模模糊糊的“愤怒”，不知是气自己的无知，还是气这个“不完美”的世界哈哈。</p>
+<p>技术一定是为解放生产力而被驱动着发展，二战期间，以图灵为代表的数独爱好者，逻辑家、语言家，数学家们等在一股力量的集结下，都在为破译德军密码表而苦苦奋斗着，每天都有约莫二十多个小时的时间可以拼命去计算，去“撞库”，如果能早一秒破译出情报，都会对战局起到“微妙”影响。这是多么激动人心的事情，然而每一个字母有二十六种出现的可能，随着单词的长度和顺序变换，暴力算法的时间复杂度会呈指数级上升，这可不是像牛顿凭借着微积分和万有引力公式就能算准确算出地球运行轨道呈椭圆形，那是在无时间限制且算力范围内，人力所可以达到的。</p>
+<span id="more"></span>
+
+<p>那么，既然穷尽人力也无法在规定时间内暴力算出题解，那能不能有一种工具可以代替自己算？显然是有的。“模仿游戏”里的问题就变成如何向工具描述这个问题，以及如何让工具独立去解决的问题了。让三维的事物液化成二维的01，真是亏得前辈们想啊，我想，力扣一直苦苦的让我们用代码实现十进制转八进制、十进制转罗马数字，让我们从工具的角度去实现加法、减法，大概也有向先行者致敬的含义吧。工具不是生来就懂得高级函数，它们是从原始时代出发，补码、原码、反码，都是前辈们在尽力向机器描绘着这个美好的三维世界，因为是尽力而不是随心所欲，所以精度丢失是我们需要接纳的“遗憾”，可能否有更高精度还原的编译模式呢？</p>
+<p>对于计算机的美学概念，大概受到大刘描绘的秦一号人肉计算机的影响，那时的自己还不够懂与门、非门、以及异或是什么， 这周学到用“异或”来计算只出现一次的数字，真觉得这种设计理念太棒了！伟大的不可能事情，拆分成这一个个最基础的门电路，竟然就变成只需分辨零和一的简单问题，真是不可思议。</p>
+<p>修行还在路上，对算法的完美与缺憾都感到欢喜，选修题没怎么做，下周需要多多注意了。</p>
+<blockquote>
+<p>原文地址：<a target="_blank" rel="noopener" href="https://leetcode.cn/circle/discuss/ba1tjW/">《算法集训营第二期｜-保持做题保持呼吸》</a> 2021-12-12</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%8A%9B%E6%89%A3/" rel="tag"># 力扣</a>
+              <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"># 算法</a>
+              <a href="/tags/%E7%AE%97%E6%B3%95%E9%9B%86%E8%AE%AD%E8%90%A5%E7%AC%AC%E4%BA%8C%E6%9C%9F/" rel="tag"># 算法集训营第二期</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/12/05/%E7%AE%97%E6%B3%95%E9%9B%86%E8%AE%AD%E8%90%A5%EF%BD%9C%E7%8F%8D%E6%83%9C%E6%97%B6%E5%85%89/" rel="prev" title="算法集训营｜珍惜时光">
+      <i class="fa fa-chevron-left"></i> 算法集训营｜珍惜时光
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/12/19/%E7%AE%97%E6%B3%95%E9%9B%86%E8%AE%AD%E8%90%A5%E7%AC%AC%E4%BA%8C%E6%9C%9F%EF%BD%9C-%E5%AD%A6%E4%B9%A0%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="next" title="算法集训营第二期｜ 学习二叉树">
+      算法集训营第二期｜ 学习二叉树 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Mary526</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">47</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.ioiox.com/" title="https:&#x2F;&#x2F;www.ioiox.com&#x2F;" rel="noopener" target="_blank">IOIOX</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://zhangwenli.com/blog/" title="http:&#x2F;&#x2F;zhangwenli.com&#x2F;blog&#x2F;" rel="noopener" target="_blank">羡辙杂俎</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mary526</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js', () => {
+    window.dsqjs = new DisqusJS({
+      api       : '' || 'https://disqus.com/api/',
+      apikey    : 'iLLKy2iT2XGtiXzL6MZwloPc5RKOG9RSEuSUUgPJvDc9HNNP9JXh6JyZrjhRnzR8',
+      shortname : 'mary526-github-io',
+      url       : "https://mary526.github.io/2021/12/12/%E7%AE%97%E6%B3%95%E9%9B%86%E8%AE%AD%E8%90%A5%E7%AC%AC%E4%BA%8C%E6%9C%9F%EF%BD%9C-%E4%BF%9D%E6%8C%81%E5%81%9A%E9%A2%98%E4%BF%9D%E6%8C%81%E5%91%BC%E5%90%B8/",
+      identifier: "2021/12/12/算法集训营第二期｜-保持做题保持呼吸/",
+      title     : "算法集训营第二期｜-保持做题保持呼吸",
+    });
+  }, window.DisqusJS);
+});
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false},"react":{"opacityDefault":1,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
