@@ -36,7 +36,7 @@ tags:
 - Homebrew：3.6.5
 - acme.sh：v3.0.5
 - OpenSSL：3.0.5
-- 群晖系统：7.0
+- 群晖系统：7.1.1
 
 # 操作步骤
 ## 网页手工生成SSL证书
@@ -115,8 +115,12 @@ acme.sh --issue --dns dns_namecom -d 'example.com' -d '*.example.com'
 ![image1151e4f981871bf7.png](https://hutianhua.com:6395/images/2022/11/25/image1151e4f981871bf7.png)
 1.控制面板 > 安全性 > 证书 > 新增 > 新增新证书
 ![imagebd1d128124471a71.png](https://hutianhua.com:6395/images/2022/11/25/imagebd1d128124471a71.png)
+![iShot_2022-11-25_11.27.50.png](https://hutianhua.com:6395/images/2022/11/25/iShot_2022-11-25_11.27.50.png)
+点下一步，然后将生成的证书.key、.cer上传，点击保存，就可以了
+![iShot_2022-11-25_11.28.30.gif](https://hutianhua.com:6395/images/2022/11/25/iShot_2022-11-25_11.28.30.gif)
 2.控制面板 > 安全性 > 证书 > 设置
-![img_1.png](img_1.png)
+给自己NAS上的各种服务，都配置上SSL证书
+![img_1.png](https://hutianhua.com:6395/images/2022/11/25/img_1.png)
 大功告成，完结，撒花🎉～
 
 # 已解决的卡壳问题
@@ -125,7 +129,7 @@ acme.sh --issue --dns dns_namecom -d 'example.com' -d '*.example.com'
 &emsp;&emsp;这里在name.com后台将本地IP加入白名单，并且开API安全令的开关，就可以了。
 ## 生成证书提示`zsh: no matches found: *.example.com`
 &emsp;&emsp;域名注意要加单引号，自己参照示例写成了`acme.sh --issue --dns dns_namecom -d example.com -d *.example.com`就会报这个错误，后来改成`acme.sh --issue --dns dns_namecom -d 'example.com' -d '*.example.com'`就可以生成证书了。
-
+![iShot_2022-11-25_11.35.48.png](https://hutianhua.com:6395/images/2022/11/25/iShot_2022-11-25_11.35.48.png)
 
 # 遗留问题
 ## ASUS路由器上的[Let's Encrypt]到底能不能生成ssl证书呢？
