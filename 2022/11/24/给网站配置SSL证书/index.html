@@ -40,10 +40,13 @@
 <meta property="og:image" content="https://hutianhua.com:6395/images/2022/11/25/image6efa243ff7d9bd80.png">
 <meta property="og:image" content="https://hutianhua.com:6395/images/2022/11/25/image1151e4f981871bf7.png">
 <meta property="og:image" content="https://hutianhua.com:6395/images/2022/11/25/imagebd1d128124471a71.png">
-<meta property="og:image" content="https://mary526.github.io/2022/11/24/%E7%BB%99%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AESSL%E8%AF%81%E4%B9%A6/img_1.png">
+<meta property="og:image" content="https://hutianhua.com:6395/images/2022/11/25/iShot_2022-11-25_11.27.50.png">
+<meta property="og:image" content="https://hutianhua.com:6395/images/2022/11/25/iShot_2022-11-25_11.28.30.gif">
+<meta property="og:image" content="https://hutianhua.com:6395/images/2022/11/25/img_1.png">
 <meta property="og:image" content="https://hutianhua.com:6395/images/2022/11/25/image7739bf8d4be88eed.png">
+<meta property="og:image" content="https://hutianhua.com:6395/images/2022/11/25/iShot_2022-11-25_11.35.48.png">
 <meta property="article:published_time" content="2022-11-24T06:32:50.000Z">
-<meta property="article:modified_time" content="2022-11-25T03:49:30.765Z">
+<meta property="article:modified_time" content="2022-11-25T05:57:54.829Z">
 <meta property="article:author" content="Mary526">
 <meta property="article:tag" content="ssl">
 <meta property="article:tag" content="https">
@@ -237,7 +240,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-25 11:49:30" itemprop="dateModified" datetime="2022-11-25T11:49:30+08:00">2022-11-25</time>
+                <time title="修改时间：2022-11-25 13:57:54" itemprop="dateModified" datetime="2022-11-25T13:57:54+08:00">2022-11-25</time>
               </span>
 
           
@@ -273,7 +276,7 @@
 <li>Homebrew：3.6.5</li>
 <li>acme.sh：v3.0.5</li>
 <li>OpenSSL：3.0.5</li>
-<li>群晖系统：7.0</li>
+<li>群晖系统：7.1.1</li>
 </ul>
 <h1 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h1><h2 id="网页手工生成SSL证书"><a href="#网页手工生成SSL证书" class="headerlink" title="网页手工生成SSL证书"></a>网页手工生成SSL证书</h2><p>&emsp;&emsp;创建ZeroSSL账号，点击”创建新证书”，按照要求生成证书文件，需要注意的是，这里验证，是需要到域名运营商后台，DNS解析里添加对应的解析信息。<br><img src="https://hutianhua.com:6395/images/2022/11/24/image17e2219ee1899111.png" alt="image17e2219ee1899111.png"><br>&emsp;&emsp;这里需要注意的是，自己域名是在name.com上购买，域名服务器设置的是默认的<code>n1.name.com</code>，所以笔者是在name.com的DNS管理记录中增加了下面这一条的校验信息，为了zeroSSL对域名的校验通过。<br><img src="https://hutianhua.com:6395/images/2022/11/24/image1d46da6fae79b736.png" alt="image1d46da6fae79b736.png"></p>
 <h2 id="命令行手工生成SSL证书"><a href="#命令行手工生成SSL证书" class="headerlink" title="命令行手工生成SSL证书"></a>命令行手工生成SSL证书</h2><p>&emsp;&emsp;上面那种只能生成三个证书，可自己至少有八个服务（而且都想配置二级域名，类似于<code>https://video.xxx.com/</code>、<code>https://nas.xxx.com/</code>）需要配置证书（当然是手工啦，jio本那种还要学习一下怎么自动化），那怎么办呢，网上有看到网友提供的代生成SSL证书服务（需要提供DNS API）——<a target="_blank" rel="noopener" href="https://ssl.ioiox.com/">泛域名证书申请 https://ssl.ioiox.com/</a>，可惜仅限于三个域名解析服务商（腾讯云 / 阿里云 / Cloudflare ），而笔者选择name.com服务商很显然不在其中，并且自己那时候还不知道怎么修改域名服务器(这样就可以用阿里云来解析)，当然，如果那时候改成阿里云来解析域名，也就损失了下面自我探索的乐趣咯，有得有失吧。</p>
@@ -298,9 +301,9 @@
 <p><img src="https://hutianhua.com:6395/images/2022/11/25/image6efa243ff7d9bd80.png" alt="image6efa243ff7d9bd80.png"></p>
 <h3 id="对单域名example-com生成证书"><a href="#对单域名example-com生成证书" class="headerlink" title="对单域名example.com生成证书"></a>对单域名<code>example.com</code>生成证书</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acme<span class="selector-class">.sh</span> <span class="attr">--issue</span> <span class="attr">--dns</span> dns_namecom -d example<span class="selector-class">.com</span> -d www<span class="selector-class">.example</span>.com</span><br></pre></td></tr></table></figure>
 <h3 id="对泛域名-example-com生成证书"><a href="#对泛域名-example-com生成证书" class="headerlink" title="对泛域名*.example.com生成证书"></a>对泛域名<code>*.example.com</code>生成证书</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">acme<span class="selector-class">.sh</span> <span class="attr">--issue</span> <span class="attr">--dns</span> dns_namecom -d <span class="string">&#x27;example.com&#x27;</span> -d <span class="string">&#x27;*.example.com&#x27;</span></span><br></pre></td></tr></table></figure>
-<h3 id="NAS配置证书"><a href="#NAS配置证书" class="headerlink" title="NAS配置证书"></a>NAS配置证书</h3><p>&emsp;&emsp;在.acme.sh/example.com下可以找到生成的证书<br><img src="https://hutianhua.com:6395/images/2022/11/25/image1151e4f981871bf7.png" alt="image1151e4f981871bf7.png"><br>1.控制面板 &gt; 安全性 &gt; 证书 &gt; 新增 &gt; 新增新证书<br><img src="https://hutianhua.com:6395/images/2022/11/25/imagebd1d128124471a71.png" alt="imagebd1d128124471a71.png"><br>2.控制面板 &gt; 安全性 &gt; 证书 &gt; 设置<br><img src="img_1.png" alt="img_1.png"><br>大功告成，完结，撒花🎉～</p>
+<h3 id="NAS配置证书"><a href="#NAS配置证书" class="headerlink" title="NAS配置证书"></a>NAS配置证书</h3><p>&emsp;&emsp;在.acme.sh/example.com下可以找到生成的证书<br><img src="https://hutianhua.com:6395/images/2022/11/25/image1151e4f981871bf7.png" alt="image1151e4f981871bf7.png"><br>1.控制面板 &gt; 安全性 &gt; 证书 &gt; 新增 &gt; 新增新证书<br><img src="https://hutianhua.com:6395/images/2022/11/25/imagebd1d128124471a71.png" alt="imagebd1d128124471a71.png"><br><img src="https://hutianhua.com:6395/images/2022/11/25/iShot_2022-11-25_11.27.50.png" alt="iShot_2022-11-25_11.27.50.png"><br>点下一步，然后将生成的证书.key、.cer上传，点击保存，就可以了<br><img src="https://hutianhua.com:6395/images/2022/11/25/iShot_2022-11-25_11.28.30.gif" alt="iShot_2022-11-25_11.28.30.gif"><br>2.控制面板 &gt; 安全性 &gt; 证书 &gt; 设置<br>给自己NAS上的各种服务，都配置上SSL证书<br><img src="https://hutianhua.com:6395/images/2022/11/25/img_1.png" alt="img_1.png"><br>大功告成，完结，撒花🎉～</p>
 <h1 id="已解决的卡壳问题"><a href="#已解决的卡壳问题" class="headerlink" title="已解决的卡壳问题"></a>已解决的卡壳问题</h1><h2 id="生成证书提示要加白名单"><a href="#生成证书提示要加白名单" class="headerlink" title="生成证书提示要加白名单"></a>生成证书提示要加白名单</h2><p><img src="https://hutianhua.com:6395/images/2022/11/25/image7739bf8d4be88eed.png" alt="image7739bf8d4be88eed.png"><br>&emsp;&emsp;这里在name.com后台将本地IP加入白名单，并且开API安全令的开关，就可以了。</p>
-<h2 id="生成证书提示zsh-no-matches-found-example-com"><a href="#生成证书提示zsh-no-matches-found-example-com" class="headerlink" title="生成证书提示zsh: no matches found: *.example.com"></a>生成证书提示<code>zsh: no matches found: *.example.com</code></h2><p>&emsp;&emsp;域名注意要加单引号，自己参照示例写成了<code>acme.sh --issue --dns dns_namecom -d example.com -d *.example.com</code>就会报这个错误，后来改成<code>acme.sh --issue --dns dns_namecom -d &#39;example.com&#39; -d &#39;*.example.com&#39;</code>就可以生成证书了。</p>
+<h2 id="生成证书提示zsh-no-matches-found-example-com"><a href="#生成证书提示zsh-no-matches-found-example-com" class="headerlink" title="生成证书提示zsh: no matches found: *.example.com"></a>生成证书提示<code>zsh: no matches found: *.example.com</code></h2><p>&emsp;&emsp;域名注意要加单引号，自己参照示例写成了<code>acme.sh --issue --dns dns_namecom -d example.com -d *.example.com</code>就会报这个错误，后来改成<code>acme.sh --issue --dns dns_namecom -d &#39;example.com&#39; -d &#39;*.example.com&#39;</code>就可以生成证书了。<br><img src="https://hutianhua.com:6395/images/2022/11/25/iShot_2022-11-25_11.35.48.png" alt="iShot_2022-11-25_11.35.48.png"></p>
 <h1 id="遗留问题"><a href="#遗留问题" class="headerlink" title="遗留问题"></a>遗留问题</h1><h2 id="ASUS路由器上的-Let’s-Encrypt-到底能不能生成ssl证书呢？"><a href="#ASUS路由器上的-Let’s-Encrypt-到底能不能生成ssl证书呢？" class="headerlink" title="ASUS路由器上的[Let’s Encrypt]到底能不能生成ssl证书呢？"></a>ASUS路由器上的[Let’s Encrypt]到底能不能生成ssl证书呢？</h2><p>&emsp;&emsp;自己的电信宽带实测80/443端口外网访问不到，可为什么看到网上有网友说可以生成证书呢？当时在这里折腾了很久，<a target="_blank" rel="noopener" href="https://www.asus.com.cn/support/FAQ/1034294">官方攻略</a>提供了这种渠道（虽然那时候的自己并没有完全理解最后一句话的含义”请确保您的路由器可以通过 Internet 的 80端口发出网域验证和证书续订”）；<a target="_blank" rel="noopener" href="https://www.52asus.com/forum.php?mod=viewthread&tid=14925&highlight=Encrypt">网上</a>也有说可以用这种方式生成证书，但自己实测不行。<br>&emsp;&emsp;”头铁”硬是升级了路由器固件（原来的380没有这个功能）版本尝试（还导致原有的科学上网不能用，啊这是另外一个故事了），但这个[Let’s Encrypt]执行命令后长时间没有反应，就很尴尬，不知道是升级的固件问题，还是[Let’s Encrypt]的问题，又或者是宽带的问题，头大。</p>
 <h2 id="acme-sh怎么更新证书呢？"><a href="#acme-sh怎么更新证书呢？" class="headerlink" title="acme.sh怎么更新证书呢？"></a>acme.sh怎么更新证书呢？</h2><p>这个待第一次证书到期后，笔者再琢磨琢磨吧。</p>
 <h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
