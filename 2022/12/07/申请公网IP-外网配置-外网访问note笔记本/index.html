@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"mary526.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+  </script>
+
+  <meta name="description" content="提纲 目的 使用的设备 跟电信申请公网IP 找电信师傅申请后台的”超级密码” 猫设置为桥接 路由器进行拨号  目的本篇主要是提供思路，方便外网也能够支持远程访问局域网内的各项NAS门户服务，原来都是手动登陆NAS的后台管理系统，然后手动点开一个个门户网站，比较不方便，只能在家才能用上这些服务，原来还尝试过蒲X英x1旁路由组网，这个一是上传宽带卡在1m&#x2F;s（后来貌似派专人给我电话申请了下升级至2m&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="申请公网IP+路由器改桥接">
+<meta property="og:url" content="https://mary526.github.io/2022/12/07/%E7%94%B3%E8%AF%B7%E5%85%AC%E7%BD%91IP-%E5%A4%96%E7%BD%91%E9%85%8D%E7%BD%AE-%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AEnote%E7%AC%94%E8%AE%B0%E6%9C%AC/index.html">
+<meta property="og:site_name" content="Mary526&#39;s blog">
+<meta property="og:description" content="提纲 目的 使用的设备 跟电信申请公网IP 找电信师傅申请后台的”超级密码” 猫设置为桥接 路由器进行拨号  目的本篇主要是提供思路，方便外网也能够支持远程访问局域网内的各项NAS门户服务，原来都是手动登陆NAS的后台管理系统，然后手动点开一个个门户网站，比较不方便，只能在家才能用上这些服务，原来还尝试过蒲X英x1旁路由组网，这个一是上传宽带卡在1m&#x2F;s（后来貌似派专人给我电话申请了下升级至2m&#x2F;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hutianhua.com:6395/images/2023/03/21/IMG_8986_.th.jpg">
+<meta property="og:image" content="https://hutianhua.com:6395/images/2023/03/21/IMG_2596_.th.png">
+<meta property="og:image" content="https://hutianhua.com:6395/images/2023/03/21/image.png">
+<meta property="article:published_time" content="2022-12-07T02:45:45.000Z">
+<meta property="article:modified_time" content="2023-03-21T09:45:09.368Z">
+<meta property="article:author" content="Mary526">
+<meta property="article:tag" content="群晖">
+<meta property="article:tag" content="华硕路由器">
+<meta property="article:tag" content="光猫">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hutianhua.com:6395/images/2023/03/21/IMG_8986_.th.jpg">
+
+<link rel="canonical" href="https://mary526.github.io/2022/12/07/%E7%94%B3%E8%AF%B7%E5%85%AC%E7%BD%91IP-%E5%A4%96%E7%BD%91%E9%85%8D%E7%BD%AE-%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AEnote%E7%AC%94%E8%AE%B0%E6%9C%AC/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>申请公网IP+路由器改桥接 | Mary526's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Mary526's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mary526.github.io/2022/12/07/%E7%94%B3%E8%AF%B7%E5%85%AC%E7%BD%91IP-%E5%A4%96%E7%BD%91%E9%85%8D%E7%BD%AE-%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AEnote%E7%AC%94%E8%AE%B0%E6%9C%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mary526">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mary526's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          申请公网IP+路由器改桥接
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-12-07 10:45:45" itemprop="dateCreated datePublished" datetime="2022-12-07T10:45:45+08:00">2022-12-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-03-21 17:45:09" itemprop="dateModified" datetime="2023-03-21T17:45:09+08:00">2023-03-21</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="提纲"><a href="#提纲" class="headerlink" title="提纲"></a>提纲</h1><ul>
+<li>目的</li>
+<li>使用的设备</li>
+<li>跟电信申请公网IP</li>
+<li>找电信师傅申请后台的”超级密码”</li>
+<li>猫设置为桥接</li>
+<li>路由器进行拨号</li>
+</ul>
+<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>本篇主要是提供思路，方便外网也能够支持远程访问局域网内的各项NAS门户服务，原来都是手动登陆NAS的后台管理系统，然后手动点开一个个门户网站，比较不方便，只能在家才能用上这些服务，原来还尝试过蒲X英x1旁路由组网，这个一是上传宽带卡在1m/s（后来貌似派专人给我电话申请了下升级至2m/s)，但还是不太满足个人的需求。</p>
+<p>自己经常使用的设备超出了3个，二是使用蒲X英时，打开一些体积比较大的excel（3M左右，里面贴了比较多的图片），EXCEL打开速度很慢估计是受限于上传（1M/s）的速度。</p>
+<h1 id="设备型号"><a href="#设备型号" class="headerlink" title="设备型号"></a>设备型号</h1><ul>
+<li>群晖NAS</li>
+<li>华硕路由器 固件版本384.X</li>
+<li>电信光猫 PT926E</li>
+</ul>
+<h1 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h1><p><strong>第3步是关键步骤</strong>，这里可以某宝付费突破一下，也可以自己试着获取一下，也可以找电信安装师傅来获取一下，笔者这里是通过电信客服申请了将宽带转为外网，自己用talent看到了超级密码，与此同时，电信安装的师傅电话给我，可能有点吃惊吧，不过还是通过短信将超级密码发给了我，建议多管齐下，不必太依赖等师傅的电话哈，笔者很有可能是碰上了好心的，建议大家各显神通，早点拿到超级密码。</p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th>任务</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td>电信客服</td>
+<td>申请外网IP</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td>关注电信公众号</td>
+<td>获取宽带账号以及密码</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td>获取超级用户的账号密码</td>
+<td>宽带管理系统的超级管理账号及超级密码</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td>登陆光猫后台管理系统</td>
+<td>改成桥接</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td>登陆路由器后台管理系统</td>
+<td>拨号设置</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td>参考链接</td>
+<td>罗列下参考过的连接</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td>遗留的问题</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h2 id="跟电信申请公网IP"><a href="#跟电信申请公网IP" class="headerlink" title="跟电信申请公网IP"></a>跟电信申请公网IP</h2><p>这里自己一开始不清楚申请外网和电信是个什么关系，也就是由谁来管理这一揽子事，电信服务只是说可以开通外网的服务，但要涉及到将光猫的拨号方式由路由改成桥接，关键在于”超级密码”，至于为什么有可能不被主动提供，就在大部分人都不希望给自己找麻烦，如果维修员需要承担”泄漏密码”的责任，还要接受三天两头无法联网的报修，自己的工资可能被影响，想来没有人愿意做这吃力不讨好的事。但如果申请者既能改好电信路由桥接，又不会无故报修举报，安装的师傅还能落个人情，何乐而不为呢？</p>
+<h2 id="关注电信公众号"><a href="#关注电信公众号" class="headerlink" title="关注电信公众号"></a>关注电信公众号</h2><p>这边自己尝试过两次公网设置，第一次是直接打10000号电信报，申请公网IP的事，并且知道了可以直接通过电信公众号来直接申请公网IP（对于我个人而言，更简单、快捷）。<br><a target="_blank" rel="noopener" href="https://hutianhua.com:6395/image/WAHz"><img src="https://hutianhua.com:6395/images/2023/03/21/IMG_8986_.th.jpg" alt="IMG_8986_.th.jpg"></a></p>
+<h2 id="获取超级用户的账号密码"><a href="#获取超级用户的账号密码" class="headerlink" title="获取超级用户的账号密码"></a>获取超级用户的账号密码</h2><p>可以找电信的师傅找超级密码；也可以自己破解；还可以找某宝，大概¥60。这边我是多种方式都尝试了下，一开始我打了电信客服的电话后，一直没有维修的师傅把密码发给我，问了下淘宝的，总觉得乐趣都给了别人，有点划不来。就打算先自己尝试一下，如果尝试失败，再看看这剩余的方式怎么用。</p>
+<p>后来参考<strong>参考链接3</strong>拿到了超级密码（实测有效），师傅也同时发来了超级用户的账号和密码，冥冥之中有点天命的感觉，不能说我做了无用功，但是没有完全依赖师傅的感觉真好。</p>
+<h3 id="找电信师傅要（免费）"><a href="#找电信师傅要（免费）" class="headerlink" title="找电信师傅要（免费）"></a>找电信师傅要（免费）</h3><p><a target="_blank" rel="noopener" href="https://hutianhua.com:6395/image/Wh7D"><img src="https://hutianhua.com:6395/images/2023/03/21/IMG_2596_.th.png" alt="IMG_2596_.th.png"></a></p>
+<h3 id="自己破解"><a href="#自己破解" class="headerlink" title="自己破解"></a>自己破解</h3><p>1、访问页面 <a target="_blank" rel="noopener" href="http://192.168.1.1:8080/cgi-bin/abcdidfope94e0934jiewru8ew414.cgi">http://192.168.1.1:8080/cgi-bin/abcdidfope94e0934jiewru8ew414.cgi</a> 开启telnet<br>2、telnet到 192.168.1.1 用户名 admin 密码 TeleCom_1234<br>3、输入su，密码是TeleCom_[设备标志后6位小写或者MAC地址后6位小写]<br>4、成功切换后，cd /var/config 进入配置文件目录，cat lastgood.xml|grep SUSER_PASSWORD 就可以查看超级密码，使用telecomadmin加上此密码就可以登陆了。</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">telnet <span class="number">192.168</span>.<span class="number">1.1</span></span><br><span class="line">Login:admin</span><br><span class="line">Password:</span><br><span class="line">$su</span><br><span class="line">Password:</span><br><span class="line"><span class="comment">#cd /var/config</span></span><br><span class="line"><span class="comment">#ls</span></span><br><span class="line">firmware_upgrade_status  lastgood_hs.<span class="keyword">xml</span>          <span class="title">lost</span>+found</span><br><span class="line">lastgood.<span class="keyword">xml</span>             <span class="title">lastgood_hs</span>.xml_bak      omci_custom_opt.conf</span><br><span class="line">lastgood.xml_bak         lastgood_mp_hs2.<span class="keyword">xml</span>      <span class="title">run_customized_sdk</span>.sh</span><br><span class="line"><span class="comment">#cat lastgood.xml|grep SUSER_PASSWORD</span></span><br><span class="line"><span class="tag">&lt;Value Name=&quot;SUSER_PASSWORD&quot; Value=&quot;telecomadmin【一串数字】&quot;/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="登陆光猫后台管理系统"><a href="#登陆光猫后台管理系统" class="headerlink" title="登陆光猫后台管理系统"></a>登陆光猫后台管理系统</h2><p>处于光猫生成的局域网下（打开192.168.1.1），将路由方式切换为桥接模式。借用路由起来拨号，分发局域网内的IP。</p>
+<blockquote>
+<p>桥接模式：光猫只起了一个光信号与电信号相互转换的作用<br>路由模式：ADSL ROUTER路由模式一般指的是ADSL ROUTER在“ROUTER ENABLE（路由使能）”的工作模式下，它具有PPPOE拨号、NAT、RIP-1等少量路由功能。<br><img src="https://hutianhua.com:6395/images/2023/03/21/image.png" alt="image.png"></p>
+</blockquote>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>1.<a target="_blank" rel="noopener" href="https://post.smzdm.com/p/a3gz8rk7/">我的NAS 篇四：家庭WiFi布网实战：外网访问的前期准备，内网改外网-光猫超级密码-光猫改桥接</a><br>2.<a target="_blank" rel="noopener" href="https://post.smzdm.com/p/aoo62847/">我的NAS 篇五：终于等到你——设置DDNS远程访问NAS,远程控制TR下载</a><br>3.<a target="_blank" rel="noopener" href="https://www.right.com.cn/forum/thread-4918144-1-1.html">武汉电信PT926E超级密码获取方法</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%BE%A4%E6%99%96/" rel="tag"># 群晖</a>
+              <a href="/tags/%E5%8D%8E%E7%A1%95%E8%B7%AF%E7%94%B1%E5%99%A8/" rel="tag"># 华硕路由器</a>
+              <a href="/tags/%E5%85%89%E7%8C%AB/" rel="tag"># 光猫</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/11/24/%E7%BB%99%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AESSL%E8%AF%81%E4%B9%A6/" rel="prev" title="单域名和泛域名生成SSL证书">
+      <i class="fa fa-chevron-left"></i> 单域名和泛域名生成SSL证书
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8F%90%E7%BA%B2"><span class="nav-number">1.</span> <span class="nav-text">提纲</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%AE%E7%9A%84"><span class="nav-number">2.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%BE%E5%A4%87%E5%9E%8B%E5%8F%B7"><span class="nav-number">3.</span> <span class="nav-text">设备型号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4"><span class="nav-number">4.</span> <span class="nav-text">具体步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%9F%E7%94%B5%E4%BF%A1%E7%94%B3%E8%AF%B7%E5%85%AC%E7%BD%91IP"><span class="nav-number">4.1.</span> <span class="nav-text">跟电信申请公网IP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E6%B3%A8%E7%94%B5%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7"><span class="nav-number">4.2.</span> <span class="nav-text">关注电信公众号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96%E8%B6%85%E7%BA%A7%E7%94%A8%E6%88%B7%E7%9A%84%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81"><span class="nav-number">4.3.</span> <span class="nav-text">获取超级用户的账号密码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%BE%E7%94%B5%E4%BF%A1%E5%B8%88%E5%82%85%E8%A6%81%EF%BC%88%E5%85%8D%E8%B4%B9%EF%BC%89"><span class="nav-number">4.3.1.</span> <span class="nav-text">找电信师傅要（免费）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%AA%E5%B7%B1%E7%A0%B4%E8%A7%A3"><span class="nav-number">4.3.2.</span> <span class="nav-text">自己破解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%99%BB%E9%99%86%E5%85%89%E7%8C%AB%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-number">4.4.</span> <span class="nav-text">登陆光猫后台管理系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="nav-number">4.5.</span> <span class="nav-text">参考链接</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Mary526</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">48</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.ioiox.com/" title="https:&#x2F;&#x2F;www.ioiox.com&#x2F;" rel="noopener" target="_blank">IOIOX</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://zhangwenli.com/blog/" title="http:&#x2F;&#x2F;zhangwenli.com&#x2F;blog&#x2F;" rel="noopener" target="_blank">羡辙杂俎</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://gcat.cc/" title="https:&#x2F;&#x2F;gcat.cc&#x2F;" rel="noopener" target="_blank">GhostCat</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mary526</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js', () => {
+    window.dsqjs = new DisqusJS({
+      api       : '' || 'https://disqus.com/api/',
+      apikey    : 'iLLKy2iT2XGtiXzL6MZwloPc5RKOG9RSEuSUUgPJvDc9HNNP9JXh6JyZrjhRnzR8',
+      shortname : 'mary526-github-io',
+      url       : "https://mary526.github.io/2022/12/07/%E7%94%B3%E8%AF%B7%E5%85%AC%E7%BD%91IP-%E5%A4%96%E7%BD%91%E9%85%8D%E7%BD%AE-%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AEnote%E7%AC%94%E8%AE%B0%E6%9C%AC/",
+      identifier: "2022/12/07/申请公网IP-外网配置-外网访问note笔记本/",
+      title     : "申请公网IP+路由器改桥接",
+    });
+  }, window.DisqusJS);
+});
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":100,"height":200},"mobile":{"show":false},"react":{"opacityDefault":1,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

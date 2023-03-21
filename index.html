@@ -183,6 +183,143 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mary526.github.io/2022/12/07/%E7%94%B3%E8%AF%B7%E5%85%AC%E7%BD%91IP-%E5%A4%96%E7%BD%91%E9%85%8D%E7%BD%AE-%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AEnote%E7%AC%94%E8%AE%B0%E6%9C%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mary526">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mary526's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/12/07/%E7%94%B3%E8%AF%B7%E5%85%AC%E7%BD%91IP-%E5%A4%96%E7%BD%91%E9%85%8D%E7%BD%AE-%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AEnote%E7%AC%94%E8%AE%B0%E6%9C%AC/" class="post-title-link" itemprop="url">申请公网IP+路由器改桥接</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-12-07 10:45:45" itemprop="dateCreated datePublished" datetime="2022-12-07T10:45:45+08:00">2022-12-07</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-03-21 17:45:09" itemprop="dateModified" datetime="2023-03-21T17:45:09+08:00">2023-03-21</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="提纲"><a href="#提纲" class="headerlink" title="提纲"></a>提纲</h1><ul>
+<li>目的</li>
+<li>使用的设备</li>
+<li>跟电信申请公网IP</li>
+<li>找电信师傅申请后台的”超级密码”</li>
+<li>猫设置为桥接</li>
+<li>路由器进行拨号</li>
+</ul>
+<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>本篇主要是提供思路，方便外网也能够支持远程访问局域网内的各项NAS门户服务，原来都是手动登陆NAS的后台管理系统，然后手动点开一个个门户网站，比较不方便，只能在家才能用上这些服务，原来还尝试过蒲X英x1旁路由组网，这个一是上传宽带卡在1m/s（后来貌似派专人给我电话申请了下升级至2m/s)，但还是不太满足个人的需求。</p>
+<p>自己经常使用的设备超出了3个，二是使用蒲X英时，打开一些体积比较大的excel（3M左右，里面贴了比较多的图片），EXCEL打开速度很慢估计是受限于上传（1M/s）的速度。</p>
+<h1 id="设备型号"><a href="#设备型号" class="headerlink" title="设备型号"></a>设备型号</h1><ul>
+<li>群晖NAS</li>
+<li>华硕路由器 固件版本384.X</li>
+<li>电信光猫 PT926E</li>
+</ul>
+<h1 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h1><p><strong>第3步是关键步骤</strong>，这里可以某宝付费突破一下，也可以自己试着获取一下，也可以找电信安装师傅来获取一下，笔者这里是通过电信客服申请了将宽带转为外网，自己用talent看到了超级密码，与此同时，电信安装的师傅电话给我，可能有点吃惊吧，不过还是通过短信将超级密码发给了我，建议多管齐下，不必太依赖等师傅的电话哈，笔者很有可能是碰上了好心的，建议大家各显神通，早点拿到超级密码。</p>
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th>任务</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td>电信客服</td>
+<td>申请外网IP</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td>关注电信公众号</td>
+<td>获取宽带账号以及密码</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td>获取超级用户的账号密码</td>
+<td>宽带管理系统的超级管理账号及超级密码</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td>登陆光猫后台管理系统</td>
+<td>改成桥接</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td>登陆路由器后台管理系统</td>
+<td>拨号设置</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td>参考链接</td>
+<td>罗列下参考过的连接</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td>遗留的问题</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h2 id="跟电信申请公网IP"><a href="#跟电信申请公网IP" class="headerlink" title="跟电信申请公网IP"></a>跟电信申请公网IP</h2><p>这里自己一开始不清楚申请外网和电信是个什么关系，也就是由谁来管理这一揽子事，电信服务只是说可以开通外网的服务，但要涉及到将光猫的拨号方式由路由改成桥接，关键在于”超级密码”，至于为什么有可能不被主动提供，就在大部分人都不希望给自己找麻烦，如果维修员需要承担”泄漏密码”的责任，还要接受三天两头无法联网的报修，自己的工资可能被影响，想来没有人愿意做这吃力不讨好的事。但如果申请者既能改好电信路由桥接，又不会无故报修举报，安装的师傅还能落个人情，何乐而不为呢？</p>
+<h2 id="关注电信公众号"><a href="#关注电信公众号" class="headerlink" title="关注电信公众号"></a>关注电信公众号</h2><p>这边自己尝试过两次公网设置，第一次是直接打10000号电信报，申请公网IP的事，并且知道了可以直接通过电信公众号来直接申请公网IP（对于我个人而言，更简单、快捷）。<br><a target="_blank" rel="noopener" href="https://hutianhua.com:6395/image/WAHz"><img src="https://hutianhua.com:6395/images/2023/03/21/IMG_8986_.th.jpg" alt="IMG_8986_.th.jpg"></a></p>
+<h2 id="获取超级用户的账号密码"><a href="#获取超级用户的账号密码" class="headerlink" title="获取超级用户的账号密码"></a>获取超级用户的账号密码</h2><p>可以找电信的师傅找超级密码；也可以自己破解；还可以找某宝，大概¥60。这边我是多种方式都尝试了下，一开始我打了电信客服的电话后，一直没有维修的师傅把密码发给我，问了下淘宝的，总觉得乐趣都给了别人，有点划不来。就打算先自己尝试一下，如果尝试失败，再看看这剩余的方式怎么用。</p>
+<p>后来参考<strong>参考链接3</strong>拿到了超级密码（实测有效），师傅也同时发来了超级用户的账号和密码，冥冥之中有点天命的感觉，不能说我做了无用功，但是没有完全依赖师傅的感觉真好。</p>
+<h3 id="找电信师傅要（免费）"><a href="#找电信师傅要（免费）" class="headerlink" title="找电信师傅要（免费）"></a>找电信师傅要（免费）</h3><p><a target="_blank" rel="noopener" href="https://hutianhua.com:6395/image/Wh7D"><img src="https://hutianhua.com:6395/images/2023/03/21/IMG_2596_.th.png" alt="IMG_2596_.th.png"></a></p>
+<h3 id="自己破解"><a href="#自己破解" class="headerlink" title="自己破解"></a>自己破解</h3><p>1、访问页面 <a target="_blank" rel="noopener" href="http://192.168.1.1:8080/cgi-bin/abcdidfope94e0934jiewru8ew414.cgi">http://192.168.1.1:8080/cgi-bin/abcdidfope94e0934jiewru8ew414.cgi</a> 开启telnet<br>2、telnet到 192.168.1.1 用户名 admin 密码 TeleCom_1234<br>3、输入su，密码是TeleCom_[设备标志后6位小写或者MAC地址后6位小写]<br>4、成功切换后，cd /var/config 进入配置文件目录，cat lastgood.xml|grep SUSER_PASSWORD 就可以查看超级密码，使用telecomadmin加上此密码就可以登陆了。</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">telnet <span class="number">192.168</span>.<span class="number">1.1</span></span><br><span class="line">Login:admin</span><br><span class="line">Password:</span><br><span class="line">$su</span><br><span class="line">Password:</span><br><span class="line"><span class="comment">#cd /var/config</span></span><br><span class="line"><span class="comment">#ls</span></span><br><span class="line">firmware_upgrade_status  lastgood_hs.<span class="keyword">xml</span>          <span class="title">lost</span>+found</span><br><span class="line">lastgood.<span class="keyword">xml</span>             <span class="title">lastgood_hs</span>.xml_bak      omci_custom_opt.conf</span><br><span class="line">lastgood.xml_bak         lastgood_mp_hs2.<span class="keyword">xml</span>      <span class="title">run_customized_sdk</span>.sh</span><br><span class="line"><span class="comment">#cat lastgood.xml|grep SUSER_PASSWORD</span></span><br><span class="line"><span class="tag">&lt;Value Name=&quot;SUSER_PASSWORD&quot; Value=&quot;telecomadmin【一串数字】&quot;/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="登陆光猫后台管理系统"><a href="#登陆光猫后台管理系统" class="headerlink" title="登陆光猫后台管理系统"></a>登陆光猫后台管理系统</h2><p>处于光猫生成的局域网下（打开192.168.1.1），将路由方式切换为桥接模式。借用路由起来拨号，分发局域网内的IP。</p>
+<blockquote>
+<p>桥接模式：光猫只起了一个光信号与电信号相互转换的作用<br>路由模式：ADSL ROUTER路由模式一般指的是ADSL ROUTER在“ROUTER ENABLE（路由使能）”的工作模式下，它具有PPPOE拨号、NAT、RIP-1等少量路由功能。<br><img src="https://hutianhua.com:6395/images/2023/03/21/image.png" alt="image.png"></p>
+</blockquote>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>1.<a target="_blank" rel="noopener" href="https://post.smzdm.com/p/a3gz8rk7/">我的NAS 篇四：家庭WiFi布网实战：外网访问的前期准备，内网改外网-光猫超级密码-光猫改桥接</a><br>2.<a target="_blank" rel="noopener" href="https://post.smzdm.com/p/aoo62847/">我的NAS 篇五：终于等到你——设置DDNS远程访问NAS,远程控制TR下载</a><br>3.<a target="_blank" rel="noopener" href="https://www.right.com.cn/forum/thread-4918144-1-1.html">武汉电信PT926E超级密码获取方法</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://mary526.github.io/2022/11/24/%E7%BB%99%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AESSL%E8%AF%81%E4%B9%A6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1479,87 +1616,6 @@ window.onresize=function(){
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mary526.github.io/2022/06/17/%E3%80%8A%E7%8C%9C%E7%81%AB%E8%BD%A6%E3%80%8B%E8%A7%82%E5%90%8E%E6%84%9F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Mary526">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mary526's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/06/17/%E3%80%8A%E7%8C%9C%E7%81%AB%E8%BD%A6%E3%80%8B%E8%A7%82%E5%90%8E%E6%84%9F/" class="post-title-link" itemprop="url">《猜火车》观后感</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-06-17 17:11:43" itemprop="dateCreated datePublished" datetime="2022-06-17T17:11:43+08:00">2022-06-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-11 12:02:44" itemprop="dateModified" datetime="2022-11-11T12:02:44+08:00">2022-11-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%BD%B1%E8%AF%84/" itemprop="url" rel="index"><span itemprop="name">影评</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>&emsp;&emsp;选择鸡娃，选择学区房，选择996，选择彩礼嫁妆，选择六个钱包，选择他妈的等额本息，选择分期付款，选择期房烂尾房法拍房二手房，选择没卵用的健身房，选择层出不穷的会员卡，选择风管机大电视机器人橱柜衣柜千人一面的家装，选择完美受害者，选择男女对立，选择接受自己能够获得的，选择放弃自己真正想要的，朋友，选择未来，选择生活！</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/06/17/%E3%80%8A%E7%8C%9C%E7%81%AB%E8%BD%A6%E3%80%8B%E8%A7%82%E5%90%8E%E6%84%9F/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1629,7 +1685,7 @@ window.onresize=function(){
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">47</span>
+          <span class="site-state-item-count">48</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1641,7 +1697,7 @@ window.onresize=function(){
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-count">27</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1658,6 +1714,9 @@ window.onresize=function(){
         </li>
         <li class="links-of-blogroll-item">
           <a href="http://zhangwenli.com/blog/" title="http:&#x2F;&#x2F;zhangwenli.com&#x2F;blog&#x2F;" rel="noopener" target="_blank">羡辙杂俎</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://gcat.cc/" title="https:&#x2F;&#x2F;gcat.cc&#x2F;" rel="noopener" target="_blank">GhostCat</a>
         </li>
     </ul>
   </div>
@@ -1681,7 +1740,7 @@ window.onresize=function(){
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
