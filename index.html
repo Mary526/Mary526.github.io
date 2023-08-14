@@ -183,6 +183,66 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://mary526.github.io/2023/08/14/js-%E5%AF%BC%E5%87%BA%E3%80%81%E5%AF%BC%E5%85%A5excel/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mary526">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mary526's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/08/14/js-%E5%AF%BC%E5%87%BA%E3%80%81%E5%AF%BC%E5%85%A5excel/" class="post-title-link" itemprop="url">js 导出、导入excel</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-08-14 18:02:06 / 修改时间：18:32:32" itemprop="dateCreated datePublished" datetime="2023-08-14T18:02:06+08:00">2023-08-14</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>大坑，来自朋友的一个需求，花费了我大几个小时研究，还没有得出什么结论，但感觉这个也是成长过程中不可或缺的一步呀<br><img src="https://pic.hutianhua.com/images/2023/08/14/iShot_2023-08-14_10.44.56.gif" alt="iShot_2023-08-14_10.44.56.gif"></p>
+<p>1.目的，从一个汇总表，拆分成N张记录的表<br>2.解决读取本地文件不成功的问题（后来使用上传文件的插件，获取文件流</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="title function_">handleFile</span>(<span class="params">info</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;info:&#x27;</span>, info)</span><br><span class="line">    <span class="comment">// this.file2Xce(e)</span></span><br><span class="line">    <span class="keyword">const</span> &#123;fileList&#125; = info</span><br><span class="line">    <span class="keyword">const</span> resultInfo = <span class="keyword">await</span>  <span class="variable language_">this</span>.<span class="title function_">file2Xce</span>(fileList[<span class="number">0</span>].<span class="property">originFileObj</span>)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;resultInfo:&quot;</span>,resultInfo)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> temObject = resultInfo[<span class="number">0</span>].<span class="property">data</span>[<span class="number">3</span>]</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;===&quot;</span>, temObject)</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">writeLedgerAsExcel</span>(temObject)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 上传文件</span></span><br><span class="line"><span class="title function_">file2Xce</span>(<span class="params">file</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="keyword">function</span>(<span class="params">resolve</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> reader = <span class="keyword">new</span> <span class="title class_">FileReader</span>()</span><br><span class="line">        reader.<span class="property">onload</span> = <span class="keyword">function</span>(<span class="params">e</span>) &#123;</span><br><span class="line">            <span class="keyword">const</span> data = e.<span class="property">target</span>.<span class="property">result</span></span><br><span class="line">            <span class="keyword">const</span> workbook = <span class="variable constant_">XLSX</span>.<span class="title function_">read</span>(data, &#123;</span><br><span class="line">                <span class="attr">type</span>: <span class="string">&#x27;binary&#x27;</span></span><br><span class="line">            &#125;)</span><br><span class="line">            <span class="keyword">let</span> result = []</span><br><span class="line">            workbook.<span class="property">SheetNames</span>.<span class="title function_">forEach</span>(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">                result.<span class="title function_">push</span>(&#123;</span><br><span class="line">                    <span class="attr">sheetName</span>: item,</span><br><span class="line">                    <span class="attr">data</span>: <span class="variable constant_">XLSX</span>.<span class="property">utils</span>.<span class="title function_">sheet_to_json</span>(workbook.<span class="property">Sheets</span>[item])</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;)</span><br><span class="line">            <span class="title function_">resolve</span>(result)</span><br><span class="line">        &#125;</span><br><span class="line">        reader.<span class="title function_">readAsBinaryString</span>(file)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">writeLedgerAsExcel</span>(<span class="params">temObject</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123;__EMPTY ,__EMPTY_1,__EMPTY_3,__EMPTY_4,__EMPTY_5,&#125; = temObject</span><br><span class="line">    <span class="keyword">const</span> jsonData = [</span><br><span class="line">        &#123;姓名:__EMPTY,性别:__EMPTY_1,出生日期:__EMPTY_5,身份证号码:__EMPTY_3,联系号码:__EMPTY_4&#125;</span><br><span class="line">    ]</span><br><span class="line">    <span class="keyword">let</span> jsonWorkSheet = <span class="variable constant_">XLSX</span>.<span class="property">utils</span>.<span class="title function_">json_to_sheet</span>(jsonData)</span><br><span class="line">    <span class="keyword">let</span> workBook = &#123;</span><br><span class="line">        <span class="title class_">SheetNames</span>: [<span class="string">&#x27;jsonWorkSheet&#x27;</span>],</span><br><span class="line">        <span class="title class_">Sheets</span>: &#123;</span><br><span class="line">            <span class="attr">jsonWorkSheet</span>: jsonWorkSheet</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="variable constant_">XLSX</span>.<span class="title function_">writeFile</span>(workBook, <span class="string">&#x27;./bb.xlsx&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">readExcel</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> jsonWorkSheet = <span class="variable constant_">XLSX</span>.<span class="property">utils</span>.<span class="title function_">json_to_sheet</span>(<span class="variable language_">this</span>.<span class="property">jsonData</span>)</span><br><span class="line">  <span class="keyword">let</span> workBook = &#123;</span><br><span class="line">    <span class="title class_">SheetNames</span>: [<span class="string">&#x27;jsonWorkSheet&#x27;</span>],</span><br><span class="line">    <span class="title class_">Sheets</span>: &#123;</span><br><span class="line">      <span class="attr">jsonWorkSheet</span>: jsonWorkSheet</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="variable constant_">XLSX</span>.<span class="title function_">writeFile</span>(workBook, <span class="string">&#x27;./bb.xlsx&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://mary526.github.io/2023/07/24/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%9A%84gpt%E7%9A%84%E8%AE%BF%E9%97%AE%E6%96%B9%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -214,7 +274,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-08-14 17:44:55" itemprop="dateModified" datetime="2023-08-14T17:44:55+08:00">2023-08-14</time>
+                <time title="修改时间：2023-08-14 17:58:09" itemprop="dateModified" datetime="2023-08-14T17:58:09+08:00">2023-08-14</time>
               </span>
 
           
@@ -298,6 +358,7 @@
 <li><a target="_blank" rel="noopener" href="https://chat.openai.com/">chatgpt 官网</a></li>
 <li><a target="_blank" rel="noopener" href="https://platform.openai.com/account/api-keys">api key获取网</a></li>
 </ul>
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>要说这个东西有啥用，貌似也没啥大用，倒是花了几块钱用作收取短信验证码的事，还总有人在怀疑是不是推广，我只能说，没必要太细究，有的阳谋如同推恩令，如同二胎的快乐，是无法避开的。</p>
 
       
     </div>
@@ -928,91 +989,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://mary526.github.io/2022/08/31/%E7%8B%AC%E7%AB%8B%E7%9A%84%E5%8F%AF%E8%83%BD%E6%9D%A1%E4%BB%B6%EF%BD%9C%E3%80%8A%E7%94%98%E5%9C%B0%E4%BC%A0%E3%80%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Mary526">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mary526's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/08/31/%E7%8B%AC%E7%AB%8B%E7%9A%84%E5%8F%AF%E8%83%BD%E6%9D%A1%E4%BB%B6%EF%BD%9C%E3%80%8A%E7%94%98%E5%9C%B0%E4%BC%A0%E3%80%8B/" class="post-title-link" itemprop="url">独立的可能条件 ｜《甘地传》</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-08-31 16:05:21" itemprop="dateCreated datePublished" datetime="2022-08-31T16:05:21+08:00">2022-08-31</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-11 12:02:44" itemprop="dateModified" datetime="2022-11-11T12:02:44+08:00">2022-11-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%BD%B1%E8%AF%84/" itemprop="url" rel="index"><span itemprop="name">影评</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>&emsp;&emsp;看完了《圣雄甘地》，心里的疑惑却越来越多。出于对穆斯林和印度教的定势思维，自己多多少少还是会有不置可否的想法，总觉得某些头戴白帽的人，都可能会极难相处。而甘地在自己脑海中最深的印象，就是不知从哪里来的好色设定，要拥着少女入睡的消息，当然，自己还是应该把甘地从大众心目中的神，还原成一个世俗生活中的普通人，他让自己感到很难能可贵的，大概就是他始终在试着继续修炼自己，莫斯科不是一天建成的，印度也很难瞬间就达到甘地心中那般境界。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/08/31/%E7%8B%AC%E7%AB%8B%E7%9A%84%E5%8F%AF%E8%83%BD%E6%9D%A1%E4%BB%B6%EF%BD%9C%E3%80%8A%E7%94%98%E5%9C%B0%E4%BC%A0%E3%80%8B/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1078,7 +1058,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">50</span>
+          <span class="site-state-item-count">51</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
