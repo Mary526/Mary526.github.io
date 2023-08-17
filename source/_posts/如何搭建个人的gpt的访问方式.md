@@ -9,6 +9,8 @@ tags:
 二、现有哪些渠道可以访问，各有什么优势、劣势 
 三、注意事项
 
+示例网站：[https://chat.hutianhua.com/](https://chat.hutianhua.com/) 
+
 
 
 ## 前言
@@ -49,7 +51,13 @@ tags:
 
 ## 相关网站
 - [chatgpt 官网](https://chat.openai.com/)
-- [api key](https://platform.openai.com/account/api-keys)
+- [api key获取网](https://platform.openai.com/account/api-keys)
+- [接码平台](https://sms-activate.org)
+
+## 思考
+要说这个东西有啥用，貌似也没啥大用，倒是花了几块钱用作收取短信验证码的事，还总有人在怀疑这网站是不是推广，我只能说，没必要太细究，有的阳谋如同推恩令，如同二胎的快乐，是无法避开的，满足好当下的需求吧。
+
+
 
 
 
