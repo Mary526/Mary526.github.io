@@ -62,6 +62,13 @@ v3.0.5
 ```
 &emsp;&emsp;原本是要用acme来执行命令签发ssl证书，这里有两个问题卡住了我，一个是命令（`acme.sh --issue --dns dns_ali -d *.hutianhua.com`）报错，提示openssl的版本太低，某些函数因缺失或改变而导致命令执行不了，网上搜了下，大概是mac自带openssl和brew安装的openssl版本不一致；另一个问题，因为自己域名解析商选的是name.com，网上的攻略贴大多是以阿里云、华为云为例的代码，所以当时折腾了很久，才稍微明白了一点域名服务商、域名解析服务商、acme之间的关系。
 &emsp;&emsp;所以在执行主线任务——用acme签发ssl证书——前，笔者需要先解决这两个"拦路虎"，有遇见类似问题的盆友可以参考下，没有遇见的盆友可以跳过这两步。
+
+### acme.sh 注册邮箱
+
+```
+acme.sh --register-account -m xxx@qq.com --server zerossl
+```
+
 ### 【选看】更新openssl配置环境变量
 =>[关于mac自带的openssl和brew安装的openssl冲突 2021-09-29](https://cloud.tencent.com/developer/article/1883983)
 ```
